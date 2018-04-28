@@ -1,0 +1,873 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C05DA4E2091F9FD00A97BB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA4D2091F9FD00A97BB0 /* AppDelegate.m */; };
+		1C05DA542091F9FD00A97BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C05DA522091F9FD00A97BB0 /* Main.storyboard */; };
+		1C05DA562091F9FF00A97BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C05DA552091F9FF00A97BB0 /* Assets.xcassets */; };
+		1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C05DA572091F9FF00A97BB0 /* LaunchScreen.storyboard */; };
+		1C05DA5C2091F9FF00A97BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA5B2091F9FF00A97BB0 /* main.m */; };
+		1C05DA732091FA3800A97BB0 /* FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA632091FA3600A97BB0 /* FTRouter.m */; };
+		1C05DA752091FA3800A97BB0 /* FTRouterComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */; };
+		1C05DA762091FA3800A97BB0 /* UIWindow+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */; };
+		1C05DA772091FA3800A97BB0 /* NSObject+FTRouterAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */; };
+		1C0D93A42092A6A80007A6D1 /* UIViewController+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */; };
+		1C0D93A72093F22C0007A6D1 /* FTRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */; };
+		1C65F97A2092D52E0054E126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9792092D52E0054E126 /* AppDelegate.m */; };
+		1C65F97D2092D52E0054E126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F97C2092D52E0054E126 /* ViewController.m */; };
+		1C65F9802092D52E0054E126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C65F97E2092D52E0054E126 /* Main.storyboard */; };
+		1C65F9822092D52F0054E126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C65F9812092D52F0054E126 /* Assets.xcassets */; };
+		1C65F9852092D52F0054E126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C65F9832092D52F0054E126 /* LaunchScreen.storyboard */; };
+		1C65F9882092D52F0054E126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9872092D52F0054E126 /* main.m */; };
+		1C65F9942092F1060054E126 /* AppDelegate+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9932092F1060054E126 /* AppDelegate+Router.m */; };
+		1C65F9972092F2730054E126 /* rt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C65F9962092F2730054E126 /* rt.plist */; };
+		1C65F99B2092F3C20054E126 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F99A2092F3C20054E126 /* BaseViewController.m */; };
+		1C65F99E2092F3E30054E126 /* ContractsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F99D2092F3E30054E126 /* ContractsListViewController.m */; };
+		1C65F9A12092F3F70054E126 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9A02092F3F70054E126 /* SearchViewController.m */; };
+		1C65F9A42092F40C0054E126 /* GroupEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9A32092F40C0054E126 /* GroupEditViewController.m */; };
+		1C65F9A72092F41A0054E126 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9A62092F41A0054E126 /* DetailViewController.m */; };
+		1C65F9AA2092F4300054E126 /* FlashOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9A92092F4300054E126 /* FlashOrderViewController.m */; };
+		1C65F9AD2092F43C0054E126 /* ApperanceSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9AC2092F43C0054E126 /* ApperanceSettingViewController.m */; };
+		1C65F9B02092F4500054E126 /* RiskSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9AF2092F4500054E126 /* RiskSettingViewController.m */; };
+		1C65F9B320930DBD0054E126 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9B220930DBD0054E126 /* UIColor+Helper.m */; };
+		1C65F9B6209317430054E126 /* AppDelegate+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9B5209317430054E126 /* AppDelegate+Router.m */; };
+		1C65F9B7209318260054E126 /* FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA632091FA3600A97BB0 /* FTRouter.m */; };
+		1C65F9B8209318290054E126 /* FTRouterComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */; };
+		1C65F9BA2093182E0054E126 /* NSObject+FTRouterAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */; };
+		1C65F9BB209318310054E126 /* UIWindow+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */; };
+		1C65F9BC209318330054E126 /* UIViewController+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */; };
+		1C65F9BD209318370054E126 /* _FTRouterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */; };
+		1C65F9BE209318370054E126 /* _FTRouterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */; };
+		1C65F9C220931BBE0054E126 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F99A2092F3C20054E126 /* BaseViewController.m */; };
+		1C65F9C6209323F50054E126 /* ResViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9C420931BD40054E126 /* ResViewController.m */; };
+		1C79A91D209474A2008225A8 /* FTRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */; };
+		B0C16867DF22ECE39344F633 /* Pods_RoutesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C902D3E49D6339F5E6D83A1 /* Pods_RoutesDemo.framework */; };
+		B50FBF279CDBF3E8A98D56C5 /* Pods_RoutesDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7658C6675896E426DF3E383E /* Pods_RoutesDemo2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C05DA492091F9FD00A97BB0 /* RoutesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C05DA4C2091F9FD00A97BB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1C05DA4D2091F9FD00A97BB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1C05DA532091F9FD00A97BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C05DA552091F9FF00A97BB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C05DA582091F9FF00A97BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1C05DA5A2091F9FF00A97BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C05DA5B2091F9FF00A97BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C05DA632091FA3600A97BB0 /* FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouter.m; sourceTree = "<group>"; };
+		1C05DA642091FA3600A97BB0 /* FTRouterComponents+FTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTRouterComponents+FTExtension.h"; sourceTree = "<group>"; };
+		1C05DA652091FA3600A97BB0 /* NSObject+FTRouterAssociated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FTRouterAssociated.h"; sourceTree = "<group>"; };
+		1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FTRouterTools.m; sourceTree = "<group>"; };
+		1C05DA672091FA3700A97BB0 /* FTRouterComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterComponents.h; sourceTree = "<group>"; };
+		1C05DA682091FA3700A97BB0 /* FTRouterDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterDefinition.h; sourceTree = "<group>"; };
+		1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouterComponents.m; sourceTree = "<group>"; };
+		1C05DA6A2091FA3700A97BB0 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FTRouter.m"; sourceTree = "<group>"; };
+		1C05DA6C2091FA3800A97BB0 /* FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouter.h; sourceTree = "<group>"; };
+		1C05DA6D2091FA3800A97BB0 /* _FTRouterTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FTRouterTools.h; sourceTree = "<group>"; };
+		1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FTRouterAssociated.m"; sourceTree = "<group>"; };
+		1C05DA702091FA3800A97BB0 /* UIWindow+FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FTRouter.h"; sourceTree = "<group>"; };
+		1C0D93A22092A6A80007A6D1 /* UIViewController+FTRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FTRouter.h"; sourceTree = "<group>"; };
+		1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FTRouter.m"; sourceTree = "<group>"; };
+		1C0D93A52093F22C0007A6D1 /* FTRouterMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTRouterMap.h; sourceTree = "<group>"; };
+		1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTRouterMap.m; sourceTree = "<group>"; };
+		1C65F9762092D52E0054E126 /* RoutesDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutesDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C65F9782092D52E0054E126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1C65F9792092D52E0054E126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1C65F97B2092D52E0054E126 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1C65F97C2092D52E0054E126 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1C65F97F2092D52E0054E126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C65F9812092D52F0054E126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C65F9842092D52F0054E126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1C65F9862092D52F0054E126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C65F9872092D52F0054E126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C65F9922092F1060054E126 /* AppDelegate+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Router.h"; sourceTree = "<group>"; };
+		1C65F9932092F1060054E126 /* AppDelegate+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Router.m"; sourceTree = "<group>"; };
+		1C65F9962092F2730054E126 /* rt.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = rt.plist; sourceTree = "<group>"; };
+		1C65F9992092F3C20054E126 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		1C65F99A2092F3C20054E126 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		1C65F99C2092F3E30054E126 /* ContractsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContractsListViewController.h; sourceTree = "<group>"; };
+		1C65F99D2092F3E30054E126 /* ContractsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContractsListViewController.m; sourceTree = "<group>"; };
+		1C65F99F2092F3F70054E126 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		1C65F9A02092F3F70054E126 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		1C65F9A22092F40C0054E126 /* GroupEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupEditViewController.h; sourceTree = "<group>"; };
+		1C65F9A32092F40C0054E126 /* GroupEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupEditViewController.m; sourceTree = "<group>"; };
+		1C65F9A52092F41A0054E126 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1C65F9A62092F41A0054E126 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1C65F9A82092F4300054E126 /* FlashOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashOrderViewController.h; sourceTree = "<group>"; };
+		1C65F9A92092F4300054E126 /* FlashOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashOrderViewController.m; sourceTree = "<group>"; };
+		1C65F9AB2092F43C0054E126 /* ApperanceSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApperanceSettingViewController.h; sourceTree = "<group>"; };
+		1C65F9AC2092F43C0054E126 /* ApperanceSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApperanceSettingViewController.m; sourceTree = "<group>"; };
+		1C65F9AE2092F4500054E126 /* RiskSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RiskSettingViewController.h; sourceTree = "<group>"; };
+		1C65F9AF2092F4500054E126 /* RiskSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiskSettingViewController.m; sourceTree = "<group>"; };
+		1C65F9B120930DBD0054E126 /* UIColor+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
+		1C65F9B220930DBD0054E126 /* UIColor+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
+		1C65F9B4209317430054E126 /* AppDelegate+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Router.h"; sourceTree = "<group>"; };
+		1C65F9B5209317430054E126 /* AppDelegate+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Router.m"; sourceTree = "<group>"; };
+		1C65F9C320931BD40054E126 /* ResViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResViewController.h; sourceTree = "<group>"; };
+		1C65F9C420931BD40054E126 /* ResViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResViewController.m; sourceTree = "<group>"; };
+		1DF4A837540E629024158E47 /* Pods-RoutesDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2.release.xcconfig"; sourceTree = "<group>"; };
+		2A559D418888C047BFBE81FC /* Pods-RoutesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		53B0F744F6C67D4C9776F467 /* Pods-RoutesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5C902D3E49D6339F5E6D83A1 /* Pods_RoutesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoutesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7658C6675896E426DF3E383E /* Pods_RoutesDemo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoutesDemo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		996680A222DC0A258B4F003A /* Pods-RoutesDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C05DA462091F9FD00A97BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0C16867DF22ECE39344F633 /* Pods_RoutesDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C65F9732092D52E0054E126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50FBF279CDBF3E8A98D56C5 /* Pods_RoutesDemo2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C05DA3E2091F9EE00A97BB0 = {
+			isa = PBXGroup;
+			children = (
+				1C05DA602091FA0400A97BB0 /* Routes */,
+				1C05DA4B2091F9FD00A97BB0 /* RoutesDemo */,
+				1C65F9772092D52E0054E126 /* RoutesDemo2 */,
+				1C05DA4A2091F9FD00A97BB0 /* Products */,
+				75CF4508953C0B67CDFB9584 /* Pods */,
+				DC702C2CFC0188863183B12B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1C05DA4A2091F9FD00A97BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C05DA492091F9FD00A97BB0 /* RoutesDemo.app */,
+				1C65F9762092D52E0054E126 /* RoutesDemo2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C05DA4B2091F9FD00A97BB0 /* RoutesDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1C05DA4C2091F9FD00A97BB0 /* AppDelegate.h */,
+				1C05DA4D2091F9FD00A97BB0 /* AppDelegate.m */,
+				1C65F9922092F1060054E126 /* AppDelegate+Router.h */,
+				1C65F9932092F1060054E126 /* AppDelegate+Router.m */,
+				1C65F9992092F3C20054E126 /* BaseViewController.h */,
+				1C65F99A2092F3C20054E126 /* BaseViewController.m */,
+				1C65F9B120930DBD0054E126 /* UIColor+Helper.h */,
+				1C65F9B220930DBD0054E126 /* UIColor+Helper.m */,
+				1C65F9982092F27D0054E126 /* Pages */,
+				1C65F9952092F1D60054E126 /* Sources */,
+				1C05DA5B2091F9FF00A97BB0 /* main.m */,
+				1C05DA5A2091F9FF00A97BB0 /* Info.plist */,
+			);
+			path = RoutesDemo;
+			sourceTree = "<group>";
+		};
+		1C05DA602091FA0400A97BB0 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				1C05DA7A2091FA6200A97BB0 /* Routes */,
+				1C05DA6A2091FA3700A97BB0 /* Router.h */,
+				1C05DA792091FA4C00A97BB0 /* Private */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		1C05DA792091FA4C00A97BB0 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				1C0D93A52093F22C0007A6D1 /* FTRouterMap.h */,
+				1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */,
+				1C05DA642091FA3600A97BB0 /* FTRouterComponents+FTExtension.h */,
+				1C05DA6D2091FA3800A97BB0 /* _FTRouterTools.h */,
+				1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		1C05DA7A2091FA6200A97BB0 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				1C05DA6C2091FA3800A97BB0 /* FTRouter.h */,
+				1C05DA632091FA3600A97BB0 /* FTRouter.m */,
+				1C05DA672091FA3700A97BB0 /* FTRouterComponents.h */,
+				1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */,
+				1C05DA682091FA3700A97BB0 /* FTRouterDefinition.h */,
+				1C05DA652091FA3600A97BB0 /* NSObject+FTRouterAssociated.h */,
+				1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */,
+				1C05DA702091FA3800A97BB0 /* UIWindow+FTRouter.h */,
+				1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */,
+				1C0D93A22092A6A80007A6D1 /* UIViewController+FTRouter.h */,
+				1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		1C65F9772092D52E0054E126 /* RoutesDemo2 */ = {
+			isa = PBXGroup;
+			children = (
+				1C65F9782092D52E0054E126 /* AppDelegate.h */,
+				1C65F9792092D52E0054E126 /* AppDelegate.m */,
+				1C65F9B4209317430054E126 /* AppDelegate+Router.h */,
+				1C65F9B5209317430054E126 /* AppDelegate+Router.m */,
+				1C65F97B2092D52E0054E126 /* ViewController.h */,
+				1C65F97C2092D52E0054E126 /* ViewController.m */,
+				1C65F97E2092D52E0054E126 /* Main.storyboard */,
+				1C65F9812092D52F0054E126 /* Assets.xcassets */,
+				1C65F9832092D52F0054E126 /* LaunchScreen.storyboard */,
+				1C65F9862092D52F0054E126 /* Info.plist */,
+				1C65F9872092D52F0054E126 /* main.m */,
+			);
+			path = RoutesDemo2;
+			sourceTree = "<group>";
+		};
+		1C65F9952092F1D60054E126 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1C05DA522091F9FD00A97BB0 /* Main.storyboard */,
+				1C05DA552091F9FF00A97BB0 /* Assets.xcassets */,
+				1C05DA572091F9FF00A97BB0 /* LaunchScreen.storyboard */,
+				1C65F9962092F2730054E126 /* rt.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1C65F9982092F27D0054E126 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				1C65F99C2092F3E30054E126 /* ContractsListViewController.h */,
+				1C65F99D2092F3E30054E126 /* ContractsListViewController.m */,
+				1C65F99F2092F3F70054E126 /* SearchViewController.h */,
+				1C65F9A02092F3F70054E126 /* SearchViewController.m */,
+				1C65F9A22092F40C0054E126 /* GroupEditViewController.h */,
+				1C65F9A32092F40C0054E126 /* GroupEditViewController.m */,
+				1C65F9A52092F41A0054E126 /* DetailViewController.h */,
+				1C65F9A62092F41A0054E126 /* DetailViewController.m */,
+				1C65F9A82092F4300054E126 /* FlashOrderViewController.h */,
+				1C65F9A92092F4300054E126 /* FlashOrderViewController.m */,
+				1C65F9AB2092F43C0054E126 /* ApperanceSettingViewController.h */,
+				1C65F9AC2092F43C0054E126 /* ApperanceSettingViewController.m */,
+				1C65F9AE2092F4500054E126 /* RiskSettingViewController.h */,
+				1C65F9AF2092F4500054E126 /* RiskSettingViewController.m */,
+				1C65F9C320931BD40054E126 /* ResViewController.h */,
+				1C65F9C420931BD40054E126 /* ResViewController.m */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		75CF4508953C0B67CDFB9584 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A559D418888C047BFBE81FC /* Pods-RoutesDemo.debug.xcconfig */,
+				53B0F744F6C67D4C9776F467 /* Pods-RoutesDemo.release.xcconfig */,
+				996680A222DC0A258B4F003A /* Pods-RoutesDemo2.debug.xcconfig */,
+				1DF4A837540E629024158E47 /* Pods-RoutesDemo2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC702C2CFC0188863183B12B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C902D3E49D6339F5E6D83A1 /* Pods_RoutesDemo.framework */,
+				7658C6675896E426DF3E383E /* Pods_RoutesDemo2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C05DA482091F9FD00A97BB0 /* RoutesDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C05DA5D2091F9FF00A97BB0 /* Build configuration list for PBXNativeTarget "RoutesDemo" */;
+			buildPhases = (
+				1132624D6E907ACD90B74E07 /* [CP] Check Pods Manifest.lock */,
+				1C05DA452091F9FD00A97BB0 /* Sources */,
+				1C05DA462091F9FD00A97BB0 /* Frameworks */,
+				1C05DA472091F9FD00A97BB0 /* Resources */,
+				B20BE3B415E2B412CC30C030 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoutesDemo;
+			productName = RoutesDemo;
+			productReference = 1C05DA492091F9FD00A97BB0 /* RoutesDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C65F9752092D52E0054E126 /* RoutesDemo2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C65F98B2092D52F0054E126 /* Build configuration list for PBXNativeTarget "RoutesDemo2" */;
+			buildPhases = (
+				A9BE07905611FE1E3BF64C8C /* [CP] Check Pods Manifest.lock */,
+				1C65F9722092D52E0054E126 /* Sources */,
+				1C65F9732092D52E0054E126 /* Frameworks */,
+				1C65F9742092D52E0054E126 /* Resources */,
+				6FA48EC0886DFCF52A3D0C98 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoutesDemo2;
+			productName = RoutesDemo2;
+			productReference = 1C65F9762092D52E0054E126 /* RoutesDemo2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C05DA3F2091F9EE00A97BB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					1C05DA482091F9FD00A97BB0 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					1C65F9752092D52E0054E126 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 1C05DA422091F9EE00A97BB0 /* Build configuration list for PBXProject "Routes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C05DA3E2091F9EE00A97BB0;
+			productRefGroup = 1C05DA4A2091F9FD00A97BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C05DA482091F9FD00A97BB0 /* RoutesDemo */,
+				1C65F9752092D52E0054E126 /* RoutesDemo2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C05DA472091F9FD00A97BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C65F9972092F2730054E126 /* rt.plist in Resources */,
+				1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */,
+				1C05DA562091F9FF00A97BB0 /* Assets.xcassets in Resources */,
+				1C05DA542091F9FD00A97BB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C65F9742092D52E0054E126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C65F9852092D52F0054E126 /* LaunchScreen.storyboard in Resources */,
+				1C65F9822092D52F0054E126 /* Assets.xcassets in Resources */,
+				1C65F9802092D52E0054E126 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1132624D6E907ACD90B74E07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoutesDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA48EC0886DFCF52A3D0C98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9BE07905611FE1E3BF64C8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoutesDemo2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B20BE3B415E2B412CC30C030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C05DA452091F9FD00A97BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C65F9AA2092F4300054E126 /* FlashOrderViewController.m in Sources */,
+				1C05DA772091FA3800A97BB0 /* NSObject+FTRouterAssociated.m in Sources */,
+				1C65F99B2092F3C20054E126 /* BaseViewController.m in Sources */,
+				1C05DA752091FA3800A97BB0 /* FTRouterComponents.m in Sources */,
+				1C65F9A72092F41A0054E126 /* DetailViewController.m in Sources */,
+				1C65F99E2092F3E30054E126 /* ContractsListViewController.m in Sources */,
+				1C65F9AD2092F43C0054E126 /* ApperanceSettingViewController.m in Sources */,
+				1C65F9C6209323F50054E126 /* ResViewController.m in Sources */,
+				1C65F9BE209318370054E126 /* _FTRouterTools.m in Sources */,
+				1C65F9B320930DBD0054E126 /* UIColor+Helper.m in Sources */,
+				1C0D93A42092A6A80007A6D1 /* UIViewController+FTRouter.m in Sources */,
+				1C05DA762091FA3800A97BB0 /* UIWindow+FTRouter.m in Sources */,
+				1C65F9A12092F3F70054E126 /* SearchViewController.m in Sources */,
+				1C05DA732091FA3800A97BB0 /* FTRouter.m in Sources */,
+				1C65F9942092F1060054E126 /* AppDelegate+Router.m in Sources */,
+				1C05DA5C2091F9FF00A97BB0 /* main.m in Sources */,
+				1C65F9B02092F4500054E126 /* RiskSettingViewController.m in Sources */,
+				1C65F9A42092F40C0054E126 /* GroupEditViewController.m in Sources */,
+				1C0D93A72093F22C0007A6D1 /* FTRouterMap.m in Sources */,
+				1C05DA4E2091F9FD00A97BB0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C65F9722092D52E0054E126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C65F9B8209318290054E126 /* FTRouterComponents.m in Sources */,
+				1C79A91D209474A2008225A8 /* FTRouterMap.m in Sources */,
+				1C65F97D2092D52E0054E126 /* ViewController.m in Sources */,
+				1C65F9BC209318330054E126 /* UIViewController+FTRouter.m in Sources */,
+				1C65F9B7209318260054E126 /* FTRouter.m in Sources */,
+				1C65F9882092D52F0054E126 /* main.m in Sources */,
+				1C65F9BB209318310054E126 /* UIWindow+FTRouter.m in Sources */,
+				1C65F9BD209318370054E126 /* _FTRouterTools.m in Sources */,
+				1C65F9C220931BBE0054E126 /* BaseViewController.m in Sources */,
+				1C65F97A2092D52E0054E126 /* AppDelegate.m in Sources */,
+				1C65F9BA2093182E0054E126 /* NSObject+FTRouterAssociated.m in Sources */,
+				1C65F9B6209317430054E126 /* AppDelegate+Router.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1C05DA522091F9FD00A97BB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C05DA532091F9FD00A97BB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1C05DA572091F9FF00A97BB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C05DA582091F9FF00A97BB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1C65F97E2092D52E0054E126 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C65F97F2092D52E0054E126 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1C65F9832092D52F0054E126 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C65F9842092D52F0054E126 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C05DA432091F9EE00A97BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1C05DA442091F9EE00A97BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1C05DA5E2091F9FF00A97BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A559D418888C047BFBE81FC /* Pods-RoutesDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NFE8L9VTV6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RoutesDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "35cce438-3c9a-4123-a310-ceec4c8c52c4";
+				PROVISIONING_PROFILE_SPECIFIER = "hujinyou-mbp-dev-all-170329";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C05DA5F2091F9FF00A97BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53B0F744F6C67D4C9776F467 /* Pods-RoutesDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RoutesDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C65F9892092D52F0054E126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996680A222DC0A258B4F003A /* Pods-RoutesDemo2.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NFE8L9VTV6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RoutesDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "35cce438-3c9a-4123-a310-ceec4c8c52c4";
+				PROVISIONING_PROFILE_SPECIFIER = "hujinyou-mbp-dev-all-170329";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C65F98A2092D52F0054E126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DF4A837540E629024158E47 /* Pods-RoutesDemo2.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RoutesDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C05DA422091F9EE00A97BB0 /* Build configuration list for PBXProject "Routes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C05DA432091F9EE00A97BB0 /* Debug */,
+				1C05DA442091F9EE00A97BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C05DA5D2091F9FF00A97BB0 /* Build configuration list for PBXNativeTarget "RoutesDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C05DA5E2091F9FF00A97BB0 /* Debug */,
+				1C05DA5F2091F9FF00A97BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C65F98B2092D52F0054E126 /* Build configuration list for PBXNativeTarget "RoutesDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C65F9892092D52F0054E126 /* Debug */,
+				1C65F98A2092D52F0054E126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C05DA3F2091F9EE00A97BB0 /* Project object */;
+}

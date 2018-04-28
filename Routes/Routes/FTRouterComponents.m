@@ -1,0 +1,163 @@
+//
+//  FTRouterComponents.m
+//  Router
+//
+//  Created by 胡金友 on 2018/4/26.
+//
+
+#import "FTRouterComponents.h"
+#import "_FTRouterTools.h"
+#import "FTRouter.h"
+#import "FTRouterComponents+FTExtension.h"
+
+@interface FTRouterComponents()
+
+@property (nonatomic, readwrite, copy) NSString *scheme;
+@property (nonatomic, readwrite, copy) NSURL *originalURL;
+@property (nonatomic, readwrite, copy) NSString *host;
+@property (nonatomic, readwrite, copy) NSString *path;
+@property (nonatomic, readwrite, strong) NSArray *pathComponents;
+@property (nonatomic, readwrite, strong) NSDictionary *queryParams;
+@property (nonatomic, readwrite, strong) NSDictionary *additionalParams;
+@property (nonatomic, readwrite, assign) FTRouterTransitionType transitionType;
+@property (nonatomic, readwrite, copy) NSURL *followedURL;
+
+@end
+
+@implementation FTRouterComponents
+
+- (instancetype)initWithURL:(NSURL *)URL additionalParameters:(NSDictionary *)params treatsHostAsPathComponent:(BOOL)treatsHostAsPathComponent {
+    return [self initWithURL:URL additionalParameters:params treatsHostAsPathComponent:treatsHostAsPathComponent defaultScheme:nil];
+}
+
+- (instancetype)initWithURL:(NSURL *)URL
+       additionalParameters:(NSDictionary *)params
+  treatsHostAsPathComponent:(BOOL)treatsHostAsPathComponent
+              defaultScheme:(NSString *)defaultScheme{
+    
+    if (self = [super init]) {
+        self.originalURL = URL;
+        self.additionalParams = params;
+        self.scheme = _FT_UNIFY_SCHEME_(URL.scheme ?: defaultScheme);
+        
+        NSURLComponents *components = [NSURLComponents componentsWithString:URL.absoluteString];
+        
+        if (components.host.length > 0 && treatsHostAsPathComponent &&
+            [components.host rangeOfString:@"."].location == NSNotFound) {
+            //
+            // 如果是 ft://futures.com/market/detail     host是一个网址，不拼到path里
+            // 如果是 ft://futures/market/detail       host不是一个网址，就当path的一段拼到path里
+            //
+            NSString *host = [components.percentEncodedHost copy];
+            components.host = @"/";
+            components.percentEncodedPath = [host stringByAppendingPathComponent:(components.percentEncodedPath ?: @"")];
+        }
+        
+        if ([FTRouter shared].alwaysTreatsURLHostsAsRoot && components.host &&
+            [components.host containsString:@"."]) {
+            components.host = @"/";
+        }
+        
+        NSString *path = [components percentEncodedPath];
+                
+        self.host = _FT_IS_VALIDATE_STRING_(components.host) ? components.host : @"/";
+       
+        if (path.length > 0 && [path characterAtIndex:0] == '/') {
+            path = [path substringFromIndex:1];
+        }
+        
+        if (path.length > 0 && [path characterAtIndex:path.length - 1] == '/') {
+            path = [path substringToIndex:path.length - 1];
+        }
+        
+        NSMutableArray *pathComponents = [[path componentsSeparatedByString:@"/"] mutableCopy];
+        if (pathComponents && pathComponents.count > 0) {
+            if ([[pathComponents.firstObject lowercaseString] isEqualToString:@"push"]) {
+                self.transitionType = FTRouterTransitionTypePush;
+                [pathComponents removeObjectAtIndex:0];
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:@"present"]) {
+                self.transitionType = FTRouterTransitionTypePresent;
+                [pathComponents removeObjectAtIndex:0];
+            } else {
+                self.transitionType = FTRouterTransitionTypeDefault;
+            }
+        }
+        
+        self.pathComponents = [pathComponents copy];
+        self.path = [pathComponents componentsJoinedByString:@"/"];
+        
+        
+        //**************************************************************************
+        
+        NSString *fragment = components.percentEncodedFragment;
+        if (_FT_IS_VALIDATE_STRING_(fragment)) {
+            NSURLComponents *fragmentComponents = [NSURLComponents componentsWithString:fragment];
+            if (!fragmentComponents.scheme) {
+                fragmentComponents.scheme = self.scheme;
+            }
+            
+            self.followedURL = fragmentComponents.URL;
+        }
+        
+        
+        //**************************************************************************
+        //**************************************************************************
+        
+        
+        NSArray <NSURLQueryItem *> *queryItems = [components queryItems] ?: @[];
+        NSMutableDictionary *queryParams = [NSMutableDictionary dictionary];
+        for (NSURLQueryItem *item in queryItems) {
+            if (item.value == nil) {
+                continue;
+            }
+            
+            if (queryParams[item.name] == nil) {
+                queryParams[item.name] = item.value;
+            } else if ([queryParams[item.name] isKindOfClass:[NSArray class]]) {
+                NSArray *values = (NSArray *)(queryParams[item.name]);
+                queryParams[item.name] = [values arrayByAddingObject:item.value];
+            } else {
+                id existingValue = queryParams[item.name];
+                queryParams[item.name] = @[existingValue, item.value];
+            }
+        }
+        
+        self.queryParams = [queryParams copy];
+    }
+    return self;
+}
+
+- (NSString *)description {
+    NSMutableString *desc = [[NSMutableString alloc] init];
+    
+    [desc appendString:@"\n\n\n*************************************************\n\n"];
+    [desc appendFormat:@"url : %@\n", self.originalURL];
+    [desc appendFormat:@"scheme : %@\n", self.scheme];
+    [desc appendFormat:@"host : %@\n", self.host];
+    [desc appendFormat:@"path : %@\n", self.path];
+    [desc appendFormat:@"pathComponents : %@\n", self.pathComponents];
+    [desc appendFormat:@"transitionType : %@\n", @(self.transitionType)];
+    
+    if (self.queryParams && self.queryParams.count > 0) {
+        [desc appendFormat:@"queryParams : %@\n", self.queryParams];
+    }
+    
+    if (self.additionalParams && self.additionalParams.count > 0) {
+        [desc appendFormat:@"additionalParams : %@\n", self.additionalParams];
+    }
+    
+    if (self.destination) {
+        [desc appendFormat:@"destination : %@\n", self.destination];
+    }
+    
+    if (self.callback) {
+        [desc appendFormat:@"destination : %@\n", self.callback];
+    }
+    
+    [desc appendString:@"\n*************************************************"];
+    
+    return desc;
+}
+
+@end
+
