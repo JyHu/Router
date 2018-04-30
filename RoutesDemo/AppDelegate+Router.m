@@ -21,11 +21,15 @@
     [FTRouter registerPath:@"order/res" withDestinationName:@"ResViewController"];
     [FTRouter registerPath:@"contract/risk" withDestinationName:@"RiskSettingViewController"];
     [FTRouter registerWithPlistFile:[[NSBundle mainBundle] pathForResource:@"rt" ofType:@"plist"]];
+    [FTRouter registerPath:@"guide" withDestinationName:@"GuidViewController"];
+    [FTRouter registerPath:@"account/login" withDestinationName:@"LoginViewController"];
     
     [FTRouter shared].keyWindow = self.window;
     
     [[FTRouter shared] setWillTransitionInspector:^id(FTRouterComponents *components, UIViewController *topViewController) {
-        if (components.transitionType == FTRouterTransitionTypePresent) {
+        if (components.transitionType == FTRouterTransitionTypePresent ||
+            components.transitionType == FTRouterTransitionTypeRoot) {
+            
             Class destCls = components.destination ? NSClassFromString(components.destination) : NULL;
             if (destCls != NULL && [destCls isSubclassOfClass:[UIViewController class]]) {
                 UIViewController *destVC = [[destCls alloc] init];

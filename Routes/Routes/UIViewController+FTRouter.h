@@ -22,7 +22,7 @@
 /**
  执行跳转的方法，主要是对于`UIWindow`的顶级视图使用
  
- 用来根据`components`里的信息来执行页面的跳转(push/present)
+ 用来根据`components`里的信息来执行页面的跳转(push/present)，只支持执行这两种跳转方式
  */
 - (BOOL)transitionWithRouterComponents:(FTRouterComponents *)components;
 

@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+Router.h"
 #import "Router.h"
+#import "GuidViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +18,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
     [self registerRoutes];
+    [FTRouter routeURL:[NSURL URLWithString:@"root/guide"]];
+    
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     return [FTRouter routeURL:url withParameters:options];
 }
 

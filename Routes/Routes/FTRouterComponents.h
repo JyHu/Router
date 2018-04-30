@@ -5,7 +5,7 @@
 //  Created by 胡金友 on 2018/4/26.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "FTRouterDefinition.h"
 
 /**
@@ -110,6 +110,8 @@
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
+
+@property (nonatomic, strong, readonly) UIViewController *destinationViewController;
 
 @end
 

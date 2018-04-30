@@ -30,8 +30,12 @@
     
     [self randomDatas];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleDone target:self action:@selector(editAction)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction)];
+    self.navigationItem.rightBarButtonItems =
+    @[
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(search)],
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(settingAction)]
+    ];
 }
 
 - (void)editAction {
@@ -46,6 +50,10 @@
 
 - (void)search {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"ft://present/market/search?keywords=FTmain"]];
+}
+
+- (void)settingAction {
+    [FTRouter routeURL:[NSURL URLWithString:@"account/setting"]];
 }
 
 - (void)randomDatas {

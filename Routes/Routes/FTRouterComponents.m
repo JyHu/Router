@@ -78,6 +78,8 @@
                 self.transitionType = FTRouterTransitionTypePresent;
             } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePageBack]) {
                 self.transitionType = FTRouterTransitionTypePageback;
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypeRoot]) {
+                self.transitionType = FTRouterTransitionTypeRoot;
             } else {
                 self.transitionType = FTRouterTransitionTypeDefault;
             }
@@ -131,6 +133,17 @@
     return self;
 }
 
+- (UIViewController *)destinationViewController {
+    if (_FT_IS_VALIDATE_STRING_(self.destination)) {
+        Class cls = NSClassFromString(self.destination);
+        if (cls && [cls isSubclassOfClass:[UIViewController class]]) {
+            return [[[cls alloc] init] mergeParamsFromComponents:self];
+        }
+    }
+    
+    return nil;
+}
+
 - (NSString *)description {
     NSMutableString *desc = [[NSMutableString alloc] init];
     
@@ -176,6 +189,7 @@
         case FTRouterTransitionTypePresent: return FTPageTransitionTypePresent;
         case FTRouterTransitionTypePush:    return FTPageTransitionTypePush;
         case FTRouterTransitionTypePageback:return FTPageTransitionTypePageBack;
+        case FTRouterTransitionTypeRoot:    return FTPageTransitionTypeRoot;
         default:                            return @"default";
     }
 }

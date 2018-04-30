@@ -6,6 +6,8 @@
 //
 
 #import "UIWindow+FTRouter.h"
+#import "FTRouterComponents.h"
+#import "FTRouter.h"
 
 @implementation UIWindow (FTRouter)
 
@@ -42,6 +44,27 @@
     } while (rootVC!=nil);
     
     return curVC;
+}
+
+- (BOOL)changeRootViewControllerWithComponents:(FTRouterComponents *)components {
+    
+    UIViewController *destPage = nil;
+    
+    if ([FTRouter shared].willTransitionInspector) {
+        destPage = [FTRouter shared].willTransitionInspector(components, nil);
+    }
+    
+    if (!destPage) {
+        destPage = components.destinationViewController;
+    }
+    
+    if (destPage && [destPage isKindOfClass:[UIViewController class]]) {
+        self.rootViewController = destPage;
+        [self makeKeyAndVisible];
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end

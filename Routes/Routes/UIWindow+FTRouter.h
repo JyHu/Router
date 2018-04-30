@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class FTRouterComponents;
+
 @interface UIWindow (FTRouter)
 
 /**
@@ -27,5 +29,7 @@
 - (UIViewController *)ft_topViewControllerWithExceptBlock:(BOOL (^)(UIResponder *responder))exceptBlock;
 - (UIViewController *)ft_topViewControllerWithExceptClasses:(NSArray *)classes;
 - (UIViewController *)ft_topViewController;
+
+- (BOOL)changeRootViewControllerWithComponents:(FTRouterComponents *)components;
 
 @end

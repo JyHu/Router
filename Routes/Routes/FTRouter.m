@@ -275,15 +275,19 @@
     }
     
     if ([FTRouter shared].keyWindow) {
-        if (![FTRouter shared].autoTransitionInspector || ([FTRouter shared].autoTransitionInspector && [FTRouter shared].autoTransitionInspector(components))) {
-            UIViewController *topViewController = [[FTRouter shared].keyWindow ft_topViewController];
-            if ((topViewController && [topViewController isKindOfClass:[UIViewController class]])) {
-                
-                if (components.transitionType == FTRouterTransitionTypePageback) {
-                    return [topViewController backtrackViewControllerAnimated:YES];
+        if (![FTRouter shared].shouldAutoTransitionInspector || ([FTRouter shared].shouldAutoTransitionInspector && [FTRouter shared].shouldAutoTransitionInspector(components))) {
+            if (components.transitionType == FTRouterTransitionTypeRoot) {
+                return [[FTRouter shared].keyWindow changeRootViewControllerWithComponents:components];
+            } else {
+                UIViewController *topViewController = [[FTRouter shared].keyWindow ft_topViewController];
+                if ((topViewController && [topViewController isKindOfClass:[UIViewController class]])) {
+                    
+                    if (components.transitionType == FTRouterTransitionTypePageback) {
+                        return [topViewController backtrackViewControllerAnimated:YES];
+                    }
+                    
+                    return [topViewController transitionWithRouterComponents:components];
                 }
-                
-                return [topViewController transitionWithRouterComponents:components];
             }
         }
     }

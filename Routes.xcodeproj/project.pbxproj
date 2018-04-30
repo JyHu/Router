@@ -46,6 +46,11 @@
 		1C65F9C220931BBE0054E126 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F99A2092F3C20054E126 /* BaseViewController.m */; };
 		1C65F9C6209323F50054E126 /* ResViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9C420931BD40054E126 /* ResViewController.m */; };
 		1C79A91D209474A2008225A8 /* FTRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */; };
+		1C79A92020971542008225A8 /* GuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C79A91F20971542008225A8 /* GuidViewController.m */; };
+		1C79A92C20972313008225A8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C79A92A20972313008225A8 /* LoginViewController.m */; };
+		1C79A92D20972313008225A8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A92B20972313008225A8 /* LoginViewController.xib */; };
+		1C79A931209724FB008225A8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C79A92F209724FB008225A8 /* SettingViewController.m */; };
+		1C79A932209724FB008225A8 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A930209724FB008225A8 /* SettingViewController.xib */; };
 		B0C16867DF22ECE39344F633 /* Pods_RoutesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C902D3E49D6339F5E6D83A1 /* Pods_RoutesDemo.framework */; };
 		B50FBF279CDBF3E8A98D56C5 /* Pods_RoutesDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7658C6675896E426DF3E383E /* Pods_RoutesDemo2.framework */; };
 /* End PBXBuildFile section */
@@ -111,6 +116,14 @@
 		1C65F9B5209317430054E126 /* AppDelegate+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Router.m"; sourceTree = "<group>"; };
 		1C65F9C320931BD40054E126 /* ResViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResViewController.h; sourceTree = "<group>"; };
 		1C65F9C420931BD40054E126 /* ResViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResViewController.m; sourceTree = "<group>"; };
+		1C79A91E20971542008225A8 /* GuidViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuidViewController.h; sourceTree = "<group>"; };
+		1C79A91F20971542008225A8 /* GuidViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuidViewController.m; sourceTree = "<group>"; };
+		1C79A92920972313008225A8 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1C79A92A20972313008225A8 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1C79A92B20972313008225A8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		1C79A92E209724FB008225A8 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		1C79A92F209724FB008225A8 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		1C79A930209724FB008225A8 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		1DF4A837540E629024158E47 /* Pods-RoutesDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2.release.xcconfig"; sourceTree = "<group>"; };
 		2A559D418888C047BFBE81FC /* Pods-RoutesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		53B0F744F6C67D4C9776F467 /* Pods-RoutesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +280,14 @@
 				1C65F9AF2092F4500054E126 /* RiskSettingViewController.m */,
 				1C65F9C320931BD40054E126 /* ResViewController.h */,
 				1C65F9C420931BD40054E126 /* ResViewController.m */,
+				1C79A91E20971542008225A8 /* GuidViewController.h */,
+				1C79A91F20971542008225A8 /* GuidViewController.m */,
+				1C79A92920972313008225A8 /* LoginViewController.h */,
+				1C79A92A20972313008225A8 /* LoginViewController.m */,
+				1C79A92B20972313008225A8 /* LoginViewController.xib */,
+				1C79A92E209724FB008225A8 /* SettingViewController.h */,
+				1C79A92F209724FB008225A8 /* SettingViewController.m */,
+				1C79A930209724FB008225A8 /* SettingViewController.xib */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -372,6 +393,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C79A92D20972313008225A8 /* LoginViewController.xib in Resources */,
+				1C79A932209724FB008225A8 /* SettingViewController.xib in Resources */,
 				1C65F9972092F2730054E126 /* rt.plist in Resources */,
 				1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */,
 				1C05DA562091F9FF00A97BB0 /* Assets.xcassets in Resources */,
@@ -473,6 +496,7 @@
 			files = (
 				1C65F9AA2092F4300054E126 /* FlashOrderViewController.m in Sources */,
 				1C05DA772091FA3800A97BB0 /* NSObject+FTRouterAssociated.m in Sources */,
+				1C79A92020971542008225A8 /* GuidViewController.m in Sources */,
 				1C65F99B2092F3C20054E126 /* BaseViewController.m in Sources */,
 				1C05DA752091FA3800A97BB0 /* FTRouterComponents.m in Sources */,
 				1C65F9A72092F41A0054E126 /* DetailViewController.m in Sources */,
@@ -480,6 +504,7 @@
 				1C65F9AD2092F43C0054E126 /* ApperanceSettingViewController.m in Sources */,
 				1C65F9C6209323F50054E126 /* ResViewController.m in Sources */,
 				1C65F9BE209318370054E126 /* _FTRouterTools.m in Sources */,
+				1C79A931209724FB008225A8 /* SettingViewController.m in Sources */,
 				1C65F9B320930DBD0054E126 /* UIColor+Helper.m in Sources */,
 				1C0D93A42092A6A80007A6D1 /* UIViewController+FTRouter.m in Sources */,
 				1C05DA762091FA3800A97BB0 /* UIWindow+FTRouter.m in Sources */,
@@ -490,6 +515,7 @@
 				1C65F9B02092F4500054E126 /* RiskSettingViewController.m in Sources */,
 				1C65F9A42092F40C0054E126 /* GroupEditViewController.m in Sources */,
 				1C0D93A72093F22C0007A6D1 /* FTRouterMap.m in Sources */,
+				1C79A92C20972313008225A8 /* LoginViewController.m in Sources */,
 				1C05DA4E2091F9FD00A97BB0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

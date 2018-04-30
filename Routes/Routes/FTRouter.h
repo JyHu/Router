@@ -53,7 +53,7 @@
  
  设置了这个属性的话，如果没有实现`handlerBlock`，那么`Router`会根据注册了的页面路自己来执行页面的跳转等操作，
  
- 对于自动跳转的操作可以使用`autoTransitionInspector`、`willTransitionInspector`来实现拦截和介入处理。
+ 对于自动跳转的操作可以使用`shouldAutoTransitionInspector`、`willTransitionInspector`来实现拦截和介入处理。
  */
 @property (nonatomic, strong) UIWindow *keyWindow;
 
@@ -67,7 +67,7 @@
 /**
  在执行自动跳转的时候，用于跳转的拦截处理，用来决定是否可以执行自动跳转
  */
-@property (nonatomic, copy) BOOL (^autoTransitionInspector)(FTRouterComponents *components);
+@property (nonatomic, copy) BOOL (^shouldAutoTransitionInspector)(FTRouterComponents *components);
 
 /**
  在执行自动跳转的时候，用于改变目标对象的拦截操作。

@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, FTRouterTransitionType) {
     FTRouterTransitionTypePresent       = 2,
     
     FTRouterTransitionTypePageback      = 10,
+    FTRouterTransitionTypeRoot          = 11,
 };
 
 
