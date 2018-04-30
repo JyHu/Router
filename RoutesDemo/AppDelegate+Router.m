@@ -12,6 +12,8 @@
 
 - (void)registerRoutes {
     
+    [FTRouter shared].debugLogEnable = YES;
+    
     // 注册了这个默认的`scheme`，那么在项目中使用路由地址的时候，可以带`scheme`，也可以不带了
     [FTRouter registerDefaultScheme:@"ft"];
     
@@ -22,11 +24,16 @@
     
     [FTRouter shared].keyWindow = self.window;
     
-    [[FTRouter shared] setWillTransitionInspector:^UIViewController *(FTRouterTransitionType transitionType, id destination) {
-        if (transitionType == FTRouterTransitionTypePresent) {
-            return [[UINavigationController alloc] initWithRootViewController:destination];
+    [[FTRouter shared] setWillTransitionInspector:^id(FTRouterComponents *components, UIViewController *topViewController) {
+        if (components.transitionType == FTRouterTransitionTypePresent) {
+            Class destCls = components.destination ? NSClassFromString(components.destination) : NULL;
+            if (destCls != NULL && [destCls isSubclassOfClass:[UIViewController class]]) {
+                UIViewController *destVC = [[destCls alloc] init];
+                [destVC mergeParamsFromComponents:components transitionFrom:topViewController];
+                return [[UINavigationController alloc] initWithRootViewController:destVC];
+            }
         }
-        return destination;
+        return nil;
     }];
 }
 

@@ -10,31 +10,70 @@
 #import "_FTRouterTools.h"
 #import "FTRouter.h"
 #import "NSObject+FTRouterAssociated.h"
+#import <objc/runtime.h>
+
+/*
+ 
+        destination
+            |
+            |
+            |              否
+     能不能转成一个类(cls) -------->  没有注册的类
+            |
+            |能
+            |
+ 是否有willTransitionInspector -------------------------->
+            |                                           |
+            |设置了block拦截block                         |
+            |                                           |
+ 是否生成了一个UIViewController对象 ---------------> 使用cls生成一个对象
+            |                                           |
+            |                                           |
+            |                                           |
+            |                            是否是一个UIViewController的对象
+            |                                           |
+            |                                           |
+            |<------------------------------------------|
+            |
+            |
+            |
+  根据跳转类型执行跳转等操作
+ 
+ */
 
 @implementation UIViewController (FTRouter)
 
 - (BOOL)transitionWithRouterComponents:(FTRouterComponents *)components {
     
     if (_FT_IS_VALIDATE_STRING_(components.destination)) {
+        
         Class cls = NSClassFromString(components.destination);
         if (cls) {
-            id dest = [[cls alloc] init];
-            if ([dest isKindOfClass:[UIViewController class]]) {
+            
+            id dest = nil;
+            // 如果设置了拦截器，则使用拦截器从外部生成一个对象
+            if ([FTRouter shared].willTransitionInspector) {
+                dest = [FTRouter shared].willTransitionInspector(components, self);
+            }
+            
+            // 如果没有目标对象，而且当前的类是一个`UIViewController`子类，则生成一个对应的对象
+            if (!dest && [cls isSubclassOfClass:[UIViewController class]]) {
+                dest = [[cls alloc] init];
+            }
+
+            // 如果生成的目标对象是一个有效的`UIViewController`对象，那么就执行跳转的操作
+            if (dest && [dest isKindOfClass:[UIViewController class]]) {
                 
-                [dest mergeParamsFromComponents:components transitionFrom:self];
-                
+                // 解析跳转类型
                 FTRouterTransitionType transitionType = components.transitionType;
                 if (transitionType == FTRouterTransitionTypeDefault &&
                     !([self isKindOfClass:[UINavigationController class]] || self.navigationController)) {
                     transitionType = FTRouterTransitionTypePresent;
                 }
                 
-                if ([FTRouter shared].willTransitionInspector) {
-                    dest = [FTRouter shared].willTransitionInspector(components.transitionType, dest);
-                    
-                    if (![dest isKindOfClass:[UIViewController class]]) {
-                        return NO;
-                    }
+                // 将当前跳转的参数映射到目标对象
+                if ([dest isKindOfClass:cls]) {
+                    [dest mergeParamsFromComponents:components transitionFrom:self];
                 }
                 
                 if ([self conformsToProtocol:@protocol(FTTransitionDelegate)] &&
@@ -42,17 +81,26 @@
                     [(id<FTTransitionDelegate>)self pageWillTransitionTo:dest withURL:components.originalURL];
                 }
                 
+                // 执行`present`跳转
                 if (transitionType == FTRouterTransitionTypePresent) {
                     [self presentViewController:dest animated:YES completion:nil];
                 } else {
+                    // 如果当前是一个`UINavigationController`对象执行`push`跳转
                     if ([self isKindOfClass:[UINavigationController class]]) {
                         [(UINavigationController *)self pushViewController:dest animated:YES];
-                    } else if (self.navigationController != nil) {
+                    }
+                    // 如果当前是一个`UINavigationController`对象执行`push`跳转
+                    else if (self.navigationController != nil) {
                         [self.navigationController pushViewController:dest animated:YES];
-                    } else {
+                    }
+                    // 当前的对象不是一个`UINavigationController`对象
+                    else {
+                        // 对于默认的跳转方式，只能执行`present`方式跳转
                         if (transitionType == FTRouterTransitionTypeDefault) {
                             [self presentViewController:dest animated:YES completion:nil];
-                        } else {
+                        }
+                        // 没有`UINavigationController`执行`push`跳转肯定失败
+                        else {
                             NSString *errorInfo = [NSString stringWithFormat:@"从<%@>跳转到<%@>失败，URL<%@>", self, dest, components.originalURL];
                             return [self _transitionWithErrorInfo:errorInfo desitination:dest URL:components.originalURL];
                         }
@@ -85,6 +133,30 @@
         [self respondsToSelector:@selector(pageTransitionTo:withURL:failedWithError:)]) {
         NSError *error = [NSError errorWithDomain:FTRouterDomain code:FTTransitionErrorCode userInfo:@{@"error" : errorInfo}];
         [(id <FTTransitionDelegate>)self pageTransitionTo:dest withURL:URL failedWithError:error];
+    }
+    
+    return NO;
+}
+
+- (BOOL)backtrackViewControllerAnimated:(BOOL)animated {
+    UINavigationController *navigationController = nil;
+    
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        navigationController = (UINavigationController *)self;
+    } else {
+        navigationController = self.navigationController;
+    }
+    
+    if (navigationController && navigationController.viewControllers.count > 1) {
+        [navigationController popViewControllerAnimated:animated];
+        
+        return YES;
+    }
+    
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:animated completion:nil];
+        
+        return YES;
     }
     
     return NO;

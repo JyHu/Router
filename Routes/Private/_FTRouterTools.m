@@ -6,6 +6,16 @@
 //
 
 #import "_FTRouterTools.h"
+#import "FTRouter.h"
+
+void _FTRouterDebugLog(NSString *fmt, ...) {
+    va_list args;
+    va_start(args, fmt);
+    if ([FTRouter shared].debugLogEnable) {
+        printf("[Router Debug Log] %s\n", [[[NSString alloc] initWithFormat:fmt arguments:args] UTF8String]);
+    }
+    va_end(args);
+}
 
 @implementation _FTRouterTools
 

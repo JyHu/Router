@@ -26,4 +26,6 @@
  */
 - (BOOL)transitionWithRouterComponents:(FTRouterComponents *)components;
 
+- (BOOL)backtrackViewControllerAnimated:(BOOL)animated;
+
 @end

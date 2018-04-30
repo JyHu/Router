@@ -31,15 +31,11 @@
     
     self.textView.text = [NSString stringWithFormat:@"%@\n%@", NSStringFromClass([self class]), self.parameters ?: @""];
     
-    if (self.navigationController && self.navigationController.viewControllers.count > 1) {
-        self.navigationItem.leftBarButtonItem = nil;
-    } else if (self.presentingViewController) {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(pageDismiss)];
-    }
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(pageDismiss)];
 }
 
 - (void)pageDismiss {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [FTRouter routeURL:[NSURL URLWithString:@"back"]];
 }
 
 - (UITextView *)textView {

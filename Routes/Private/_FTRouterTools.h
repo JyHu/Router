@@ -12,6 +12,11 @@
 #define _FT_UNIFY_SCHEME_(scheme) [_FTRouterTools unifyScheme:scheme]
 #define _FT_UNIFY_PATH_(path) [_FTRouterTools unifyPath:path]
 
+/**
+ 输出调试内容
+ */
+void _FTRouterDebugLog(NSString *fmt, ...);
+
 @interface _FTRouterTools : NSObject
 
 /**
@@ -53,6 +58,15 @@
 
 @interface NSURLComponents (_FTRouterTools)
 
+/**
+ 根据给定的参数处理`path`
+ 
+ @param treatHostAsPath
+    - YES   会将有效的host(不是`/`、`localhost`，并且不是URL)拼接进`path`中
+    - NO    直接拿`path`
+ 
+ @return 处理过的开头不带`/`的路径
+ */
 - (NSString *)routerPathWithTreatsHostAsPath:(BOOL)treatHostAsPath;
 
 @end

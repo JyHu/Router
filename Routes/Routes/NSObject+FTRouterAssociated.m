@@ -57,11 +57,11 @@
 
 @implementation NSObject (FTRouterMerger)
 
-- (void)mergeParamsFromComponents:(FTRouterComponents *)components {
-    [self mergeParamsFromComponents:components transitionFrom:nil];
+- (instancetype)mergeParamsFromComponents:(FTRouterComponents *)components {
+    return [self mergeParamsFromComponents:components transitionFrom:nil];
 }
 
-- (void)mergeParamsFromComponents:(FTRouterComponents *)components transitionFrom:(id)transitionFrom {
+- (instancetype)mergeParamsFromComponents:(FTRouterComponents *)components transitionFrom:(id)transitionFrom {
     self.transitionFrom = transitionFrom;
     self.callback = [components.callback copy];
     
@@ -75,12 +75,12 @@
         [parameters addEntriesFromDictionary:components.additionalParams];
     }
     
-    [self mergeParamsFromDictionary:parameters];
-    
     self.parameters = parameters.allKeys.count > 0 ? parameters : nil;
+
+    return [self mergeParamsFromDictionary:parameters];
 }
 
-- (void)mergeParamsFromDictionary:(NSDictionary *)paramsDictionary {
+- (instancetype)mergeParamsFromDictionary:(NSDictionary *)paramsDictionary {
     if (paramsDictionary) {
         for (NSString *key in paramsDictionary) {
             objc_property_t property_t = class_getProperty([self class], key.UTF8String);
@@ -89,6 +89,8 @@
             }
         }
     }
+    
+    return self;
 }
 
 @end

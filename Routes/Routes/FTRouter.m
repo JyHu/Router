@@ -113,7 +113,7 @@
 + (BOOL)_registerWithURLComponents:(NSURLComponents *)components destinationName:(NSString *)destName {
     NSString *scheme = _FT_UNIFY_SCHEME_(components.scheme) ?: [FTRouter shared].defaultScheme;
     if (scheme && _FT_IS_VALIDATE_STRING_(destName)) {
-        NSString *path = _FT_UNIFY_PATH_([components routerPathWithTreatsHostAsPath:[FTRouter shared]]);
+        NSString *path = _FT_UNIFY_PATH_([components routerPathWithTreatsHostAsPath:[FTRouter shared].alwaysTreatsHostAsPathComponent]);
         if (_FT_IS_VALIDATE_STRING_(path)) {
             FTRouterMap *routerMap = [self _mapWithAutoRegisteredScheme:scheme];
             
@@ -121,7 +121,7 @@
                 [routerMap.destinationsMap setObject:destName forKey:path];
             }
             
-            printf("%s\n", [[NSString stringWithFormat:@"Register --> [Router `%@` : <`%@` - `%@`>]", scheme, path, destName] UTF8String]);
+            _FTRouterDebugLog(@"Register --> [Router `%@` : <`%@` - `%@`>]", scheme, path, destName);
             
             return YES;
         }
@@ -268,6 +268,8 @@
     components.destination = [FTRouter destinationForPath:components.path withScheme:components.scheme];
     components.callback = callback;
     
+    _FTRouterDebugLog(@"%@", components);
+    
     if ([FTRouter shared].handlerBlock) {
         return [FTRouter shared].handlerBlock(components);
     }
@@ -276,6 +278,11 @@
         if (![FTRouter shared].autoTransitionInspector || ([FTRouter shared].autoTransitionInspector && [FTRouter shared].autoTransitionInspector(components))) {
             UIViewController *topViewController = [[FTRouter shared].keyWindow ft_topViewController];
             if ((topViewController && [topViewController isKindOfClass:[UIViewController class]])) {
+                
+                if (components.transitionType == FTRouterTransitionTypePageback) {
+                    return [topViewController backtrackViewControllerAnimated:YES];
+                }
+                
                 return [topViewController transitionWithRouterComponents:components];
             }
         }
@@ -291,3 +298,8 @@
 
 NSErrorDomain const FTRouterDomain = @"com.ft.routerDomain";
 NSInteger FTTransitionErrorCode = 20001;
+
+NSString *const FTPageTransitionTypePush        = @"push";
+NSString *const FTPageTransitionTypePresent     = @"present";
+NSString *const FTPageTransitionTypePageBack    = @"back";
+NSString *const FTPageTransitionTypeRoot        = @"root";

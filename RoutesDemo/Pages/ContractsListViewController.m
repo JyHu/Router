@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+        
     self.title = @"Contracts list";
     
     [self.view addSubview:self.tableView];
@@ -103,7 +103,7 @@
     NSString *base = @"0123456789qwertyuiopasdfghjklzxcvbnm";
     NSMutableString *res = [[NSMutableString alloc] initWithString:@"contract"];
     for (NSInteger i = 0; i < 1 + arc4random_uniform(10); i ++) {
-        [res appendFormat:@"%c", [base characterAtIndex:arc4random_uniform(base.length)]];
+        [res appendFormat:@"%c", [base characterAtIndex:arc4random_uniform((uint32_t)base.length)]];
     }
     return res;
 }

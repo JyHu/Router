@@ -23,9 +23,11 @@ typedef id (^FTRouterCallBack)(__weak id directedTarget, id userInfo);
  - FTRouterTransitionTypePresent: 执行`present`
  */
 typedef NS_ENUM(NSUInteger, FTRouterTransitionType) {
-    FTRouterTransitionTypeDefault,
-    FTRouterTransitionTypePush,
-    FTRouterTransitionTypePresent,
+    FTRouterTransitionTypeDefault       = 0,
+    FTRouterTransitionTypePush          = 1,
+    FTRouterTransitionTypePresent       = 2,
+    
+    FTRouterTransitionTypePageback      = 10,
 };
 
 

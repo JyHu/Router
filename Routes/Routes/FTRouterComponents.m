@@ -72,14 +72,18 @@
         
         NSMutableArray *pathComponents = [[path componentsSeparatedByString:@"/"] mutableCopy];
         if (pathComponents && pathComponents.count > 0) {
-            if ([[pathComponents.firstObject lowercaseString] isEqualToString:@"push"]) {
+            if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePush]) {
                 self.transitionType = FTRouterTransitionTypePush;
-                [pathComponents removeObjectAtIndex:0];
-            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:@"present"]) {
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePresent]) {
                 self.transitionType = FTRouterTransitionTypePresent;
-                [pathComponents removeObjectAtIndex:0];
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePageBack]) {
+                self.transitionType = FTRouterTransitionTypePageback;
             } else {
                 self.transitionType = FTRouterTransitionTypeDefault;
+            }
+            
+            if (self.transitionType != FTRouterTransitionTypeDefault) {
+                [pathComponents removeObjectAtIndex:0];
             }
         }
         
@@ -130,13 +134,17 @@
 - (NSString *)description {
     NSMutableString *desc = [[NSMutableString alloc] init];
     
-    [desc appendString:@"\n\n\n*************************************************\n\n"];
+    [desc appendFormat:@"\n"];
+    [desc appendFormat:@"**********************************************************\n"];
+    [desc appendFormat:@"                    FTRouterComponents\n"];
+    [desc appendFormat:@"         ----------------------------------------\n"];
+    
     [desc appendFormat:@"url : %@\n", self.originalURL];
     [desc appendFormat:@"scheme : %@\n", self.scheme];
     [desc appendFormat:@"host : %@\n", self.host];
     [desc appendFormat:@"path : %@\n", self.path];
     [desc appendFormat:@"pathComponents : %@\n", self.pathComponents];
-    [desc appendFormat:@"transitionType : %@\n", @(self.transitionType)];
+    [desc appendFormat:@"transitionType : %@\n", [self transitionTypeString]];
     
     if (self.queryParams && self.queryParams.count > 0) {
         [desc appendFormat:@"queryParams : %@\n", self.queryParams];
@@ -154,9 +162,22 @@
         [desc appendFormat:@"destination : %@\n", self.callback];
     }
     
-    [desc appendString:@"\n*************************************************"];
+    if (self.followedURL) {
+        [desc appendFormat:@"followedURL : %@\n", self.followedURL];
+    }
+    
+    [desc appendFormat:@"**********************************************************\n"];
     
     return desc;
+}
+
+- (NSString *)transitionTypeString {
+    switch (self.transitionType) {
+        case FTRouterTransitionTypePresent: return FTPageTransitionTypePresent;
+        case FTRouterTransitionTypePush:    return FTPageTransitionTypePush;
+        case FTRouterTransitionTypePageback:return FTPageTransitionTypePageBack;
+        default:                            return @"default";
+    }
 }
 
 @end

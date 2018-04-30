@@ -20,6 +20,11 @@
 #pragma mark - 一些全局参数的设置，注意，必须使用`shared`单例方法来调用
 
 /**
+ 用于全局的测试信息输出的控制属性。
+ */
+@property (nonatomic, assign) BOOL debugLogEnable;
+
+/**
  用于对路由地址的解析控制。
  
  如果设置为YES，那么会对路由地址中的`host`拼到path中去当做path的开始，
@@ -71,7 +76,7 @@
  
  那么就可以在这里做拦截处理，并返回一个`UINavigationCotontroller`或其子类
  */
-@property (nonatomic, copy) id (^willTransitionInspector)(FTRouterTransitionType transitionType, id destination);
+@property (nonatomic, copy) id (^willTransitionInspector)(FTRouterComponents *components, UIViewController *topViewController);
 
 /**
  当前APP全局的`scheme`，如果不设置这个参数，那么在执行路由地址注册、路由跳转的时候，必须带上`scheme`，
@@ -115,7 +120,7 @@
 + (void)registerSchemes:(NSArray <NSString *> *)schemes;
 
 /**
- 注册一个默认的`scheme`，详细见`defaultScheme`属性
+ 注册一个默认的`scheme`，详细见`defaultScheme`属性，只能注册一次，后续的注册都会丢弃。
  */
 + (BOOL)registerDefaultScheme:(NSString *)scheme;
 
@@ -270,3 +275,10 @@
 
 extern NSErrorDomain const FTRouterDomain;
 extern NSInteger FTTransitionErrorCode;
+
+extern NSString *const FTPageTransitionTypePush;
+extern NSString *const FTPageTransitionTypePresent;
+extern NSString *const FTPageTransitionTypePageBack;
+extern NSString *const FTPageTransitionTypeRoot;
+
+
