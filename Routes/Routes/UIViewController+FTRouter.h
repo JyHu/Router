@@ -26,6 +26,11 @@
  */
 - (BOOL)transitionWithRouterComponents:(FTRouterComponents *)components;
 
+/**
+ 执行页面的返回操作，会根据当前页面的类型，自动的选择返回的方式，
+ 
+ 会先判断是否可以`pop`，然后再判断是否可以`dismiss`。
+ */
 - (BOOL)backtrackViewControllerAnimated:(BOOL)animated;
 
 @end

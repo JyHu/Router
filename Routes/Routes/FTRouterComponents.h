@@ -111,6 +111,9 @@
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 
+/**
+ 生成对应的视图控制器
+ */
 @property (nonatomic, strong, readonly) UIViewController *destinationViewController;
 
 @end

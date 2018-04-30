@@ -30,6 +30,9 @@
 - (UIViewController *)ft_topViewControllerWithExceptClasses:(NSArray *)classes;
 - (UIViewController *)ft_topViewController;
 
+/**
+ 切换跟视图控制器
+ */
 - (BOOL)changeRootViewControllerWithComponents:(FTRouterComponents *)components;
 
 @end

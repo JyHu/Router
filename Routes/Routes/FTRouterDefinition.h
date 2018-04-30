@@ -21,6 +21,8 @@ typedef id (^FTRouterCallBack)(__weak id directedTarget, id userInfo);
  - FTRouterTransitionTypeDefault: 默认的方式，如果当前是`UINavigationController`，则执行`push`否则执行`present`
  - FTRouterTransitionTypePush: 执行`push`，如果当前不是`UINavigationController`则无法跳转
  - FTRouterTransitionTypePresent: 执行`present`
+ - FTRouterTransitionTypePageback: 执行页面的返回操作
+ - FTRouterTransitionTypeRoot: 执行切换`keyWindow`的跟视图控制器的操作
  */
 typedef NS_ENUM(NSUInteger, FTRouterTransitionType) {
     FTRouterTransitionTypeDefault       = 0,
