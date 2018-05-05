@@ -9,4 +9,6 @@
 
 @interface ApperanceSettingViewController : BaseViewController
 
+@property (nonatomic, strong) NSString *name;
+
 @end

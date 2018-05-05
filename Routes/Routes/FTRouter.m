@@ -237,18 +237,18 @@
 #pragma mark - 使用`router`进行跳转的方法
 
 + (BOOL)routeURL:(NSURL *)URL {
-    return [self routeURL:URL withParameters:nil];
+    return [self routeURL:URL parameters:nil];
 }
 
-+ (BOOL)routeURL:(NSURL *)URL withParameters:(NSDictionary *)parameters {
-    return [self routeURL:URL withParameters:parameters callBack:nil];
++ (BOOL)routeURL:(NSURL *)URL parameters:(NSDictionary *)parameters {
+    return [self routeURL:URL parameters:parameters callBack:nil];
 }
 
 + (BOOL)routeURL:(NSURL *)URL callBack:(FTRouterCallBack)callBack {
-    return [self routeURL:URL withParameters:nil callBack:callBack];
+    return [self routeURL:URL parameters:nil callBack:callBack];
 }
 
-+ (BOOL)routeURL:(NSURL *)URL withParameters:(NSDictionary<NSString *,id> *)parameters
++ (BOOL)routeURL:(NSURL *)URL parameters:(NSDictionary<NSString *,id> *)parameters
         callBack:(FTRouterCallBack)callBack {
     return [self _router:URL parameters:parameters callBack:callBack];
 }

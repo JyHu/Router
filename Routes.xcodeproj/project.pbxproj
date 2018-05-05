@@ -51,6 +51,9 @@
 		1C79A92D20972313008225A8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A92B20972313008225A8 /* LoginViewController.xib */; };
 		1C79A931209724FB008225A8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C79A92F209724FB008225A8 /* SettingViewController.m */; };
 		1C79A932209724FB008225A8 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A930209724FB008225A8 /* SettingViewController.xib */; };
+		1C79A96520996A54008225A8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A96320996A53008225A8 /* README.md */; };
+		1C79A96620996A54008225A8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A96420996A54008225A8 /* Podfile */; };
+		1CAA2CAE209C9E650084787C /* FTRouterURLCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAA2CAD209C9E650084787C /* FTRouterURLCoder.m */; };
 		B0C16867DF22ECE39344F633 /* Pods_RoutesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C902D3E49D6339F5E6D83A1 /* Pods_RoutesDemo.framework */; };
 		B50FBF279CDBF3E8A98D56C5 /* Pods_RoutesDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7658C6675896E426DF3E383E /* Pods_RoutesDemo2.framework */; };
 /* End PBXBuildFile section */
@@ -124,6 +127,10 @@
 		1C79A92E209724FB008225A8 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		1C79A92F209724FB008225A8 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		1C79A930209724FB008225A8 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		1C79A96320996A53008225A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1C79A96420996A54008225A8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1CAA2CAC209C9E650084787C /* FTRouterURLCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTRouterURLCoder.h; sourceTree = "<group>"; };
+		1CAA2CAD209C9E650084787C /* FTRouterURLCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTRouterURLCoder.m; sourceTree = "<group>"; };
 		1DF4A837540E629024158E47 /* Pods-RoutesDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2.release.xcconfig"; sourceTree = "<group>"; };
 		2A559D418888C047BFBE81FC /* Pods-RoutesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		53B0F744F6C67D4C9776F467 /* Pods-RoutesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +162,8 @@
 		1C05DA3E2091F9EE00A97BB0 = {
 			isa = PBXGroup;
 			children = (
+				1C79A96420996A54008225A8 /* Podfile */,
+				1C79A96320996A53008225A8 /* README.md */,
 				1C05DA602091FA0400A97BB0 /* Routes */,
 				1C05DA4B2091F9FD00A97BB0 /* RoutesDemo */,
 				1C65F9772092D52E0054E126 /* RoutesDemo2 */,
@@ -228,6 +237,8 @@
 				1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */,
 				1C0D93A22092A6A80007A6D1 /* UIViewController+FTRouter.h */,
 				1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */,
+				1CAA2CAC209C9E650084787C /* FTRouterURLCoder.h */,
+				1CAA2CAD209C9E650084787C /* FTRouterURLCoder.m */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -363,6 +374,7 @@
 				TargetAttributes = {
 					1C05DA482091F9FD00A97BB0 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					1C65F9752092D52E0054E126 = {
 						CreatedOnToolsVersion = 9.3;
@@ -395,7 +407,9 @@
 			files = (
 				1C79A92D20972313008225A8 /* LoginViewController.xib in Resources */,
 				1C79A932209724FB008225A8 /* SettingViewController.xib in Resources */,
+				1C79A96620996A54008225A8 /* Podfile in Resources */,
 				1C65F9972092F2730054E126 /* rt.plist in Resources */,
+				1C79A96520996A54008225A8 /* README.md in Resources */,
 				1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */,
 				1C05DA562091F9FF00A97BB0 /* Assets.xcassets in Resources */,
 				1C05DA542091F9FD00A97BB0 /* Main.storyboard in Resources */,
@@ -504,6 +518,7 @@
 				1C65F9AD2092F43C0054E126 /* ApperanceSettingViewController.m in Sources */,
 				1C65F9C6209323F50054E126 /* ResViewController.m in Sources */,
 				1C65F9BE209318370054E126 /* _FTRouterTools.m in Sources */,
+				1CAA2CAE209C9E650084787C /* FTRouterURLCoder.m in Sources */,
 				1C79A931209724FB008225A8 /* SettingViewController.m in Sources */,
 				1C65F9B320930DBD0054E126 /* UIColor+Helper.m in Sources */,
 				1C0D93A42092A6A80007A6D1 /* UIViewController+FTRouter.m in Sources */,
@@ -646,10 +661,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo;
@@ -657,6 +669,8 @@
 				PROVISIONING_PROFILE = "35cce438-3c9a-4123-a310-ceec4c8c52c4";
 				PROVISIONING_PROFILE_SPECIFIER = "hujinyou-mbp-dev-all-170329";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -712,15 +726,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -783,10 +795,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo2;
@@ -849,10 +858,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -62,7 +62,7 @@
 ```objective-c
 __weak typeof(self) weakself = self;
 // 带回调block
-[FTRouter routeURL:[NSURL URLWithString:@"ft://present/contract/edit"] withParameters:@{@"datas" : self.datas} callBack:^id(__weak id directedTarget, id userInfo) {
+[FTRouter routeURL:[NSURL URLWithString:@"ft://present/contract/edit"] parameters:@{@"datas" : self.datas} callBack:^id(__weak id directedTarget, id userInfo) {
     __strong typeof(weakself) strongSelf = weakself;
     [strongSelf randomDatas];
     return nil;
@@ -137,11 +137,11 @@ __weak typeof(self) weakself = self;
 
 ## TODO
 
-* 增加对于单例视图的支持
-* 稳定性的调试和优化
-* URL中中文UTF8编解码的支持
-* 自动跳转时特殊处理的`willTransitionInspector`优化
-* 增加一些常用的第三方APP的`scheme`
+- [x] 单例视图跳转的支持可以看[这里](https://github.com/JyHu/ReusedNavigationPage)
+- [ ] 稳定性的调试和优化
+- [x] 增加URL中文UTF8编解码的支持
+- [ ] 自动跳转时特殊处理的`willTransitionInspector`优化
+- [ ] 增加一些常用的第三方APP的`scheme`
 
 ## License
 

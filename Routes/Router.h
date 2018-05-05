@@ -12,6 +12,7 @@
 #import "FTRouterDefinition.h"
 #import "UIWindow+FTRouter.h"
 #import "UIViewController+FTRouter.h"
+#import "FTRouterURLCoder.h"
 
 
 //! Project version number for Router.

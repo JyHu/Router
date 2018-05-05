@@ -60,7 +60,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [FTRouter routeURL:[NSURL URLWithString:@"ft://push/contract/detail"]
-        withParameters:@{@"contract" : self.datas[indexPath.row]}];
+        parameters:@{@"contract" : self.datas[indexPath.row]}];
 }
 
 - (UITableView *)tableView {

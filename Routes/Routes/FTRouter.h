@@ -263,9 +263,9 @@
  
  */
 
-+ (BOOL)routeURL:(nullable NSURL *)URL withParameters:(NSDictionary<NSString *,id> *)parameters callBack:(FTRouterCallBack)callBack;
++ (BOOL)routeURL:(nullable NSURL *)URL parameters:(NSDictionary<NSString *,id> *)parameters callBack:(FTRouterCallBack)callBack;
 + (BOOL)routeURL:(nullable NSURL *)URL callBack:(FTRouterCallBack)callBack;
-+ (BOOL)routeURL:(nullable NSURL *)URL withParameters:(NSDictionary<NSString *, id> *)parameters;
++ (BOOL)routeURL:(nullable NSURL *)URL parameters:(NSDictionary<NSString *, id> *)parameters;
 + (BOOL)routeURL:(nullable NSURL *)URL;
 
 

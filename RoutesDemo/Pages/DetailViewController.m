@@ -39,11 +39,12 @@
 }
 
 - (void)flashOrder {
-    [FTRouter routeURL:[NSURL URLWithString:@"ft://order/flash"] withParameters:self.parameters];
+    [FTRouter routeURL:[NSURL URLWithString:@"ft://order/flash"] parameters:self.parameters];
 }
 
 - (void)apperanceSetting {
-    [FTRouter routeURL:[NSURL URLWithString:@"ft://present/contract/apperance"]];
+    NSDictionary *param = @{@"name" : @"张三", @"from" : @"中国北京", @"age": @"13", @"sex" : @"female"};
+    [[UIApplication sharedApplication] openURL:[@"ft://present/contract/apperance" routerURLWithParameters:param]];
 }
 
 - (void)riskSetting {

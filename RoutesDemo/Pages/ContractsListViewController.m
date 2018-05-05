@@ -41,7 +41,7 @@
 - (void)editAction {
     __weak typeof(self) weakself = self;
     // 带回调block
-    [FTRouter routeURL:[NSURL URLWithString:@"ft://present/contract/edit"] withParameters:@{@"datas" : self.datas} callBack:^id(__weak id directedTarget, id userInfo) {
+    [FTRouter routeURL:[NSURL URLWithString:@"ft://present/contract/edit"] parameters:@{@"datas" : self.datas} callBack:^id(__weak id directedTarget, id userInfo) {
         __strong typeof(weakself) strongSelf = weakself;
         [strongSelf randomDatas];
         return nil;
@@ -88,7 +88,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [FTRouter routeURL:[NSURL URLWithString:@"push/contract/detail"]
-        withParameters:@{@"contract" : self.datas[indexPath.row]}];
+        parameters:@{@"contract" : self.datas[indexPath.row]}];
 }
 
 - (UITableView *)tableView {

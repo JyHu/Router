@@ -17,7 +17,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"Apperance Setting";
+    self.title = self.name;
 }
 
 - (void)didReceiveMemoryWarning {
