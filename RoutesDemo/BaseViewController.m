@@ -29,7 +29,15 @@
         make.bottom.equalTo(self.view.mas_centerY);
     }];
     
-    self.textView.text = [NSString stringWithFormat:@"%@\n%@", NSStringFromClass([self class]), self.parameters ?: @""];
+    NSMutableString *info = [[NSMutableString alloc] init];
+    [info appendFormat:@"%@\n", NSStringFromClass([self class])];
+    if (self.parameters) {
+        [info appendString:@"parameters:\n"];
+        for (NSString *key in self.parameters.allKeys) {
+            [info appendFormat:@"   - %@ : %@\n", key, self.parameters[key]];
+        }
+    }
+    self.textView.text = info;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(pageDismiss)];
 }

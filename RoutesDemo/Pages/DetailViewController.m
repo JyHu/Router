@@ -43,7 +43,7 @@
 }
 
 - (void)apperanceSetting {
-    NSDictionary *param = @{@"name" : @"张三", @"from" : @"中国北京", @"age": @"13", @"sex" : @"female"};
+    NSDictionary *param = @{@"name" : @"张三", @"from" : @"中国北京", @"age": @"13", @"sex" : @"female", @"goods" : @[@1, @2, @3, @4]};
     [[UIApplication sharedApplication] openURL:[@"ft://present/contract/apperance" routerURLWithParameters:param]];
 }
 

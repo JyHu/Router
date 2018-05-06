@@ -59,15 +59,8 @@
             if (item.value == nil) {
                 continue;
             }
-            NSLog(@"query item : %@", item);
             if (queryParams[item.name] == nil) {
                 queryParams[item.name] = item.value;
-            } else if ([queryParams[item.name] isKindOfClass:[NSArray class]]) {
-                NSArray *values = (NSArray *)(queryParams[item.name]);
-                queryParams[item.name] = [values arrayByAddingObject:item.value];
-            } else {
-                id existingValue = queryParams[item.name];
-                queryParams[item.name] = @[existingValue, item.value];
             }
         }
     }
