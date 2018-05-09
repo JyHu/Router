@@ -145,4 +145,4 @@ __weak typeof(self) weakself = self;
 
 ## License
 
-[`MIT License`](https://github.com/JyHu/Router/blob/master/LICENSE)
+[`MIT License`](./LICENSE)

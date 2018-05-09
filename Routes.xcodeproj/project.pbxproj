@@ -35,6 +35,8 @@
 		1C5EEB5420A2BC160007A784 /* JMPme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5EEB1E20A2B9460007A784 /* JMPme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C5EEB5A20A2BF670007A784 /* FTRouterTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB5820A2BF670007A784 /* FTRouterTools.h */; };
 		1C5EEB5B20A2BF670007A784 /* FTRouterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB5920A2BF670007A784 /* FTRouterTools.m */; };
+		1C5EEB5E20A2C7DB0007A784 /* JMPme.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1C5EEB5C20A2C7DA0007A784 /* JMPme.podspec */; };
+		1C5EEB5F20A2C7DB0007A784 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1C5EEB5D20A2C7DA0007A784 /* LICENSE */; };
 		1C65F97A2092D52E0054E126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9792092D52E0054E126 /* AppDelegate.m */; };
 		1C65F97D2092D52E0054E126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F97C2092D52E0054E126 /* ViewController.m */; };
 		1C65F9802092D52E0054E126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C65F97E2092D52E0054E126 /* Main.storyboard */; };
@@ -138,6 +140,8 @@
 		1C5EEB4020A2BBD90007A784 /* FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouter.h; sourceTree = "<group>"; };
 		1C5EEB5820A2BF670007A784 /* FTRouterTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTRouterTools.h; sourceTree = "<group>"; };
 		1C5EEB5920A2BF670007A784 /* FTRouterTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTRouterTools.m; sourceTree = "<group>"; };
+		1C5EEB5C20A2C7DA0007A784 /* JMPme.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JMPme.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1C5EEB5D20A2C7DA0007A784 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1C65F9762092D52E0054E126 /* RoutesDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutesDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C65F9782092D52E0054E126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C65F9792092D52E0054E126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			children = (
 				1C79A96420996A54008225A8 /* Podfile */,
 				1C79A96320996A53008225A8 /* README.md */,
+				1C5EEB5C20A2C7DA0007A784 /* JMPme.podspec */,
+				1C5EEB5D20A2C7DA0007A784 /* LICENSE */,
 				1C05DA4B2091F9FD00A97BB0 /* RoutesDemo */,
 				1C65F9772092D52E0054E126 /* RoutesDemo2 */,
 				1C5EEB1F20A2B9470007A784 /* JMPme */,
@@ -516,8 +522,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C79A92D20972313008225A8 /* LoginViewController.xib in Resources */,
+				1C5EEB5E20A2C7DB0007A784 /* JMPme.podspec in Resources */,
 				1C79A932209724FB008225A8 /* SettingViewController.xib in Resources */,
 				1C79A96620996A54008225A8 /* Podfile in Resources */,
+				1C5EEB5F20A2C7DB0007A784 /* LICENSE in Resources */,
 				1C65F9972092F2730054E126 /* rt.plist in Resources */,
 				1C79A96520996A54008225A8 /* README.md in Resources */,
 				1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */,
