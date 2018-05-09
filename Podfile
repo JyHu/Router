@@ -9,3 +9,7 @@ end
 target 'RoutesDemo2' do
     pod 'Masonry', '~> 1.1.0'
 end
+
+target 'JMPerDemo' do
+    pod 'SnapKit', '~> 4.0.0'
+end

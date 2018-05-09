@@ -4,15 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JMPer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>JMPerDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>RoutesDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>RoutesDemo2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 	</dict>
 </dict>

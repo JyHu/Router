@@ -6,13 +6,13 @@
 	<string>SettingViewController</string>
 	<key>contract/list</key>
 	<string>ContractsListViewController</string>
-	<key>jmp://order/flash</key>
+	<key>ft://order/flash</key>
 	<string>FlashOrderViewController</string>
-	<key>jmp://contract/edit</key>
+	<key>ft://contract/edit</key>
 	<string>GroupEditViewController</string>
-	<key>jmp://contract/detail</key>
+	<key>ft://contract/detail</key>
 	<string>DetailViewController</string>
-	<key>jmp://market/search</key>
+	<key>ft://market/search</key>
 	<string>SearchViewController</string>
 </dict>
 </plist>
