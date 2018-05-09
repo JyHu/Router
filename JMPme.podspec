@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://git.tigerbrokers.net/ftiger_ios_group/Router.git', :tag => '0.1' }
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'JMPme/*/*.{h,m}'
+  s.source_files = 'JMPme/**/*.{h,m}'
   
 end
