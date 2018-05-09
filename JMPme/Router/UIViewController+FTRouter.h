@@ -9,14 +9,6 @@
 
 @class FTRouterComponents;
 
-@protocol FTTransitionDelegate
-
-- (void)pageWillTransitionTo:(id)target withURL:(NSURL *)URL;
-- (void)pageDidTransitionTo:(id)target withURL:(NSURL *)URL;
-- (void)pageTransitionTo:(id)target withURL:(NSURL *)URL failedWithError:(NSError *)error;
-
-@end
-
 @interface UIViewController (FTRouter)
 
 /**

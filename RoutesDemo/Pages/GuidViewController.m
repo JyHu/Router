@@ -8,7 +8,7 @@
 #import "GuidViewController.h"
 #import <Masonry/Masonry.h>
 #import "UIColor+Helper.h"
-#import "Router.h"
+#import "JMPme.h"
 
 @interface GuidViewController () <UIScrollViewDelegate>
 

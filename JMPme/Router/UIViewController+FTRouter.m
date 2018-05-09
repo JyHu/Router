@@ -7,7 +7,7 @@
 
 #import "UIViewController+FTRouter.h"
 #import "FTRouterComponents.h"
-#import "_FTRouterTools.h"
+#import "FTRouterTools.h"
 #import "FTRouter.h"
 #import "NSObject+FTRouterAssociated.h"
 #import <objc/runtime.h>
@@ -76,63 +76,42 @@
                     [dest mergeParamsFromComponents:components transitionFrom:self];
                 }
                 
-                if ([self conformsToProtocol:@protocol(FTTransitionDelegate)] &&
-                    [self respondsToSelector:@selector(pageWillTransitionTo:withURL:)]) {
-                    [(id<FTTransitionDelegate>)self pageWillTransitionTo:dest withURL:components.originalURL];
-                }
-                
                 // 执行`present`跳转
                 if (transitionType == FTRouterTransitionTypePresent) {
                     [self presentViewController:dest animated:YES completion:nil];
+                    return YES;
                 } else {
                     // 如果当前是一个`UINavigationController`对象执行`push`跳转
                     if ([self isKindOfClass:[UINavigationController class]]) {
                         [(UINavigationController *)self pushViewController:dest animated:YES];
+                        return YES;
                     }
                     // 如果当前是一个`UINavigationController`对象执行`push`跳转
                     else if (self.navigationController != nil) {
                         [self.navigationController pushViewController:dest animated:YES];
+                        return YES;
                     }
                     // 当前的对象不是一个`UINavigationController`对象
                     else {
                         // 对于默认的跳转方式，只能执行`present`方式跳转
                         if (transitionType == FTRouterTransitionTypeDefault) {
                             [self presentViewController:dest animated:YES completion:nil];
+                            return YES;
                         }
                         // 没有`UINavigationController`执行`push`跳转肯定失败
                         else {
-                            NSString *errorInfo = [NSString stringWithFormat:@"从<%@>跳转到<%@>失败，URL<%@>", self, dest, components.originalURL];
-                            return [self _transitionWithErrorInfo:errorInfo desitination:dest URL:components.originalURL];
+                            _FTRouterDebugLog(@"从<%@>跳转到<%@>失败，URL<%@>", self, dest, components.originalURL);
                         }
                     }
                 }
-                
-                if ([self conformsToProtocol:@protocol(FTTransitionDelegate)] &&
-                    [self respondsToSelector:@selector(pageDidTransitionTo:withURL:)]) {
-                    [(id<FTTransitionDelegate>)self pageDidTransitionTo:dest withURL:components.originalURL];
-                }
-                
             } else {
-                NSString *errorInfo = [NSString stringWithFormat:@"跳转的类不是`UIViewController`的子类"];
-                return [self _transitionWithErrorInfo:errorInfo desitination:nil URL:components.originalURL];
+                _FTRouterDebugLog(@"跳转的类不是`UIViewController`的子类");
             }
         } else {
-            NSString *errorInfo = [NSString stringWithFormat:@"跳转的类<%@>不是一个有效的类名", components.destination];
-            return [self _transitionWithErrorInfo:errorInfo desitination:nil URL:components.originalURL];
+            _FTRouterDebugLog(@"跳转的类<%@>不是一个有效的类名", components.destination);
         }
     } else {
-        NSString *errorInfo = [NSString stringWithFormat:@"没有注册[%@]对应的类", components.originalURL];
-        return [self _transitionWithErrorInfo:errorInfo desitination:nil URL:components.originalURL];
-    }
-    
-    return YES;
-}
-
-- (BOOL)_transitionWithErrorInfo:(NSString *)errorInfo desitination:(id)dest URL:(NSURL *)URL {
-    if ([self conformsToProtocol:@protocol(FTTransitionDelegate)] &&
-        [self respondsToSelector:@selector(pageTransitionTo:withURL:failedWithError:)]) {
-        NSError *error = [NSError errorWithDomain:FTRouterDomain code:FTTransitionErrorCode userInfo:@{@"error" : errorInfo}];
-        [(id <FTTransitionDelegate>)self pageTransitionTo:dest withURL:URL failedWithError:error];
+        _FTRouterDebugLog(@"没有注册[%@]对应的类", components.originalURL);
     }
     
     return NO;

@@ -7,7 +7,7 @@
 
 #import "FTRouter.h"
 #import "FTRouterMap.h"
-#import "_FTRouterTools.h"
+#import "FTRouterTools.h"
 #import "FTRouterComponents.h"
 #import "UIWindow+FTRouter.h"
 #import "UIViewController+FTRouter.h"

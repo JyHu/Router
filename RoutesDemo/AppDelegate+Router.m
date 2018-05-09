@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate+Router.h"
-#import "Router.h"
+#import "JMPme.h"
 
 @implementation AppDelegate (Router)
 

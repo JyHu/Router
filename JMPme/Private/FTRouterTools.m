@@ -1,11 +1,11 @@
 //
-//  _FTRouterTools.m
-//  Router
+//  FTRouterTools.m
+//  JMPme
 //
-//  Created by 胡金友 on 2018/4/25.
+//  Created by 胡金友 on 2018/5/9.
 //
 
-#import "_FTRouterTools.h"
+#import "FTRouterTools.h"
 #import "FTRouter.h"
 
 void _FTRouterDebugLog(NSString *fmt, ...) {
@@ -17,7 +17,7 @@ void _FTRouterDebugLog(NSString *fmt, ...) {
     va_end(args);
 }
 
-@implementation _FTRouterTools
+@implementation FTRouterTools
 
 + (BOOL)isValidateString:(NSString *)string {
     if (string == nil || string == NULL || [string isKindOfClass:[NSNull class]]) {
@@ -52,7 +52,7 @@ void _FTRouterDebugLog(NSString *fmt, ...) {
 @end
 
 
-@implementation NSURL (_FTRouterTools)
+@implementation NSURL (FTRouterTools)
 
 - (NSString *)routerPathWithTreatsHostAsPath:(BOOL)treatHostAsPath {
     if (treatHostAsPath && ![self.host isEqualToString:@"/"] &&
@@ -66,7 +66,7 @@ void _FTRouterDebugLog(NSString *fmt, ...) {
 
 @end
 
-@implementation NSURLComponents (_FTRouterTools)
+@implementation NSURLComponents (FTRouterTools)
 
 - (NSString *)routerPathWithTreatsHostAsPath:(BOOL)treatHostAsPath {
     if (treatHostAsPath && ![self.host isEqualToString:@"/"] &&

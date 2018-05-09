@@ -5,7 +5,7 @@
 //  Created by 胡金友 on 2018/4/26.
 //
 
-#import "Router.h"
+#import "FTRouterComponents.h"
 
 /**
  

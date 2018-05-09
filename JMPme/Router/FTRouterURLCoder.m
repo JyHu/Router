@@ -6,7 +6,7 @@
 //
 
 #import "FTRouterURLCoder.h"
-#import "_FTRouterTools.h"
+#import "FTRouterTools.h"
 
 @implementation FTRouterURLCoder
 

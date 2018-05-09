@@ -6,9 +6,11 @@
 //
 
 #import "FTRouterComponents.h"
-#import "_FTRouterTools.h"
+#import "FTRouterTools.h"
 #import "FTRouter.h"
 #import "FTRouterComponents+FTExtension.h"
+#import "FTRouterURLCoder.h"
+#import "NSObject+FTRouterAssociated.h"
 
 @interface FTRouterComponents()
 

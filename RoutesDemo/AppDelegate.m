@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Router.h"
-#import "Router.h"
+#import "JMPme.h"
 #import "GuidViewController.h"
 
 @interface AppDelegate ()

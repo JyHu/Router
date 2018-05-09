@@ -12,12 +12,29 @@
 		1C05DA562091F9FF00A97BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C05DA552091F9FF00A97BB0 /* Assets.xcassets */; };
 		1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C05DA572091F9FF00A97BB0 /* LaunchScreen.storyboard */; };
 		1C05DA5C2091F9FF00A97BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA5B2091F9FF00A97BB0 /* main.m */; };
-		1C05DA732091FA3800A97BB0 /* FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA632091FA3600A97BB0 /* FTRouter.m */; };
-		1C05DA752091FA3800A97BB0 /* FTRouterComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */; };
-		1C05DA762091FA3800A97BB0 /* UIWindow+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */; };
-		1C05DA772091FA3800A97BB0 /* NSObject+FTRouterAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */; };
-		1C0D93A42092A6A80007A6D1 /* UIViewController+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */; };
-		1C0D93A72093F22C0007A6D1 /* FTRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */; };
+		1C5EEB2220A2B9470007A784 /* JMPme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB2020A2B9470007A784 /* JMPme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB2520A2B9470007A784 /* JMPme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5EEB1E20A2B9460007A784 /* JMPme.framework */; };
+		1C5EEB2620A2B9470007A784 /* JMPme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5EEB1E20A2B9460007A784 /* JMPme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C5EEB4120A2BBD90007A784 /* FTRouterComponents+FTExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB2E20A2BBD90007A784 /* FTRouterComponents+FTExtension.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1C5EEB4320A2BBD90007A784 /* FTRouterMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3020A2BBD90007A784 /* FTRouterMap.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1C5EEB4420A2BBD90007A784 /* FTRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3120A2BBD90007A784 /* FTRouterMap.m */; };
+		1C5EEB4620A2BBD90007A784 /* FTRouterDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3420A2BBD90007A784 /* FTRouterDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB4720A2BBD90007A784 /* FTRouterComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3520A2BBD90007A784 /* FTRouterComponents.m */; };
+		1C5EEB4820A2BBD90007A784 /* UIWindow+FTRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3620A2BBD90007A784 /* UIWindow+FTRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB4920A2BBD90007A784 /* FTRouterURLCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3720A2BBD90007A784 /* FTRouterURLCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB4A20A2BBD90007A784 /* NSObject+FTRouterAssociated.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3820A2BBD90007A784 /* NSObject+FTRouterAssociated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB4B20A2BBD90007A784 /* FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3920A2BBD90007A784 /* FTRouter.m */; };
+		1C5EEB4C20A2BBD90007A784 /* UIViewController+FTRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3A20A2BBD90007A784 /* UIViewController+FTRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB4D20A2BBD90007A784 /* FTRouterURLCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3B20A2BBD90007A784 /* FTRouterURLCoder.m */; };
+		1C5EEB4E20A2BBD90007A784 /* UIWindow+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3C20A2BBD90007A784 /* UIWindow+FTRouter.m */; };
+		1C5EEB4F20A2BBD90007A784 /* FTRouterComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB3D20A2BBD90007A784 /* FTRouterComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB5020A2BBD90007A784 /* UIViewController+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3E20A2BBD90007A784 /* UIViewController+FTRouter.m */; };
+		1C5EEB5120A2BBD90007A784 /* NSObject+FTRouterAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB3F20A2BBD90007A784 /* NSObject+FTRouterAssociated.m */; };
+		1C5EEB5220A2BBD90007A784 /* FTRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB4020A2BBD90007A784 /* FTRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5EEB5320A2BC160007A784 /* JMPme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5EEB1E20A2B9460007A784 /* JMPme.framework */; };
+		1C5EEB5420A2BC160007A784 /* JMPme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5EEB1E20A2B9460007A784 /* JMPme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C5EEB5A20A2BF670007A784 /* FTRouterTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C5EEB5820A2BF670007A784 /* FTRouterTools.h */; };
+		1C5EEB5B20A2BF670007A784 /* FTRouterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EEB5920A2BF670007A784 /* FTRouterTools.m */; };
 		1C65F97A2092D52E0054E126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9792092D52E0054E126 /* AppDelegate.m */; };
 		1C65F97D2092D52E0054E126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F97C2092D52E0054E126 /* ViewController.m */; };
 		1C65F9802092D52E0054E126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C65F97E2092D52E0054E126 /* Main.storyboard */; };
@@ -36,16 +53,8 @@
 		1C65F9B02092F4500054E126 /* RiskSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9AF2092F4500054E126 /* RiskSettingViewController.m */; };
 		1C65F9B320930DBD0054E126 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9B220930DBD0054E126 /* UIColor+Helper.m */; };
 		1C65F9B6209317430054E126 /* AppDelegate+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9B5209317430054E126 /* AppDelegate+Router.m */; };
-		1C65F9B7209318260054E126 /* FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA632091FA3600A97BB0 /* FTRouter.m */; };
-		1C65F9B8209318290054E126 /* FTRouterComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */; };
-		1C65F9BA2093182E0054E126 /* NSObject+FTRouterAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */; };
-		1C65F9BB209318310054E126 /* UIWindow+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */; };
-		1C65F9BC209318330054E126 /* UIViewController+FTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */; };
-		1C65F9BD209318370054E126 /* _FTRouterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */; };
-		1C65F9BE209318370054E126 /* _FTRouterTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */; };
 		1C65F9C220931BBE0054E126 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F99A2092F3C20054E126 /* BaseViewController.m */; };
 		1C65F9C6209323F50054E126 /* ResViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C65F9C420931BD40054E126 /* ResViewController.m */; };
-		1C79A91D209474A2008225A8 /* FTRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */; };
 		1C79A92020971542008225A8 /* GuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C79A91F20971542008225A8 /* GuidViewController.m */; };
 		1C79A92C20972313008225A8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C79A92A20972313008225A8 /* LoginViewController.m */; };
 		1C79A92D20972313008225A8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A92B20972313008225A8 /* LoginViewController.xib */; };
@@ -53,10 +62,51 @@
 		1C79A932209724FB008225A8 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A930209724FB008225A8 /* SettingViewController.xib */; };
 		1C79A96520996A54008225A8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A96320996A53008225A8 /* README.md */; };
 		1C79A96620996A54008225A8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1C79A96420996A54008225A8 /* Podfile */; };
-		1CAA2CAE209C9E650084787C /* FTRouterURLCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAA2CAD209C9E650084787C /* FTRouterURLCoder.m */; };
 		B0C16867DF22ECE39344F633 /* Pods_RoutesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C902D3E49D6339F5E6D83A1 /* Pods_RoutesDemo.framework */; };
 		B50FBF279CDBF3E8A98D56C5 /* Pods_RoutesDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7658C6675896E426DF3E383E /* Pods_RoutesDemo2.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C5EEB2320A2B9470007A784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C05DA3F2091F9EE00A97BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C5EEB1D20A2B9460007A784;
+			remoteInfo = JMPme;
+		};
+		1C5EEB5520A2BC160007A784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C05DA3F2091F9EE00A97BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C5EEB1D20A2B9460007A784;
+			remoteInfo = JMPme;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C5EEB2A20A2B9470007A784 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C5EEB2620A2B9470007A784 /* JMPme.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5EEB5720A2BC170007A784 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1C5EEB5420A2BC160007A784 /* JMPme.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1C05DA492091F9FD00A97BB0 /* RoutesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,23 +117,27 @@
 		1C05DA582091F9FF00A97BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C05DA5A2091F9FF00A97BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C05DA5B2091F9FF00A97BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C05DA632091FA3600A97BB0 /* FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouter.m; sourceTree = "<group>"; };
-		1C05DA642091FA3600A97BB0 /* FTRouterComponents+FTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTRouterComponents+FTExtension.h"; sourceTree = "<group>"; };
-		1C05DA652091FA3600A97BB0 /* NSObject+FTRouterAssociated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FTRouterAssociated.h"; sourceTree = "<group>"; };
-		1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FTRouterTools.m; sourceTree = "<group>"; };
-		1C05DA672091FA3700A97BB0 /* FTRouterComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterComponents.h; sourceTree = "<group>"; };
-		1C05DA682091FA3700A97BB0 /* FTRouterDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterDefinition.h; sourceTree = "<group>"; };
-		1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouterComponents.m; sourceTree = "<group>"; };
-		1C05DA6A2091FA3700A97BB0 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
-		1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FTRouter.m"; sourceTree = "<group>"; };
-		1C05DA6C2091FA3800A97BB0 /* FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouter.h; sourceTree = "<group>"; };
-		1C05DA6D2091FA3800A97BB0 /* _FTRouterTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FTRouterTools.h; sourceTree = "<group>"; };
-		1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FTRouterAssociated.m"; sourceTree = "<group>"; };
-		1C05DA702091FA3800A97BB0 /* UIWindow+FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FTRouter.h"; sourceTree = "<group>"; };
-		1C0D93A22092A6A80007A6D1 /* UIViewController+FTRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FTRouter.h"; sourceTree = "<group>"; };
-		1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FTRouter.m"; sourceTree = "<group>"; };
-		1C0D93A52093F22C0007A6D1 /* FTRouterMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTRouterMap.h; sourceTree = "<group>"; };
-		1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTRouterMap.m; sourceTree = "<group>"; };
+		1C5EEB1E20A2B9460007A784 /* JMPme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMPme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C5EEB2020A2B9470007A784 /* JMPme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMPme.h; sourceTree = "<group>"; };
+		1C5EEB2120A2B9470007A784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C5EEB2E20A2BBD90007A784 /* FTRouterComponents+FTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTRouterComponents+FTExtension.h"; sourceTree = "<group>"; };
+		1C5EEB3020A2BBD90007A784 /* FTRouterMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterMap.h; sourceTree = "<group>"; };
+		1C5EEB3120A2BBD90007A784 /* FTRouterMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouterMap.m; sourceTree = "<group>"; };
+		1C5EEB3420A2BBD90007A784 /* FTRouterDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterDefinition.h; sourceTree = "<group>"; };
+		1C5EEB3520A2BBD90007A784 /* FTRouterComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouterComponents.m; sourceTree = "<group>"; };
+		1C5EEB3620A2BBD90007A784 /* UIWindow+FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FTRouter.h"; sourceTree = "<group>"; };
+		1C5EEB3720A2BBD90007A784 /* FTRouterURLCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterURLCoder.h; sourceTree = "<group>"; };
+		1C5EEB3820A2BBD90007A784 /* NSObject+FTRouterAssociated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FTRouterAssociated.h"; sourceTree = "<group>"; };
+		1C5EEB3920A2BBD90007A784 /* FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouter.m; sourceTree = "<group>"; };
+		1C5EEB3A20A2BBD90007A784 /* UIViewController+FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FTRouter.h"; sourceTree = "<group>"; };
+		1C5EEB3B20A2BBD90007A784 /* FTRouterURLCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRouterURLCoder.m; sourceTree = "<group>"; };
+		1C5EEB3C20A2BBD90007A784 /* UIWindow+FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FTRouter.m"; sourceTree = "<group>"; };
+		1C5EEB3D20A2BBD90007A784 /* FTRouterComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouterComponents.h; sourceTree = "<group>"; };
+		1C5EEB3E20A2BBD90007A784 /* UIViewController+FTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FTRouter.m"; sourceTree = "<group>"; };
+		1C5EEB3F20A2BBD90007A784 /* NSObject+FTRouterAssociated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FTRouterAssociated.m"; sourceTree = "<group>"; };
+		1C5EEB4020A2BBD90007A784 /* FTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRouter.h; sourceTree = "<group>"; };
+		1C5EEB5820A2BF670007A784 /* FTRouterTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTRouterTools.h; sourceTree = "<group>"; };
+		1C5EEB5920A2BF670007A784 /* FTRouterTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTRouterTools.m; sourceTree = "<group>"; };
 		1C65F9762092D52E0054E126 /* RoutesDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutesDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C65F9782092D52E0054E126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C65F9792092D52E0054E126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,8 +183,6 @@
 		1C79A930209724FB008225A8 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		1C79A96320996A53008225A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1C79A96420996A54008225A8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1CAA2CAC209C9E650084787C /* FTRouterURLCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTRouterURLCoder.h; sourceTree = "<group>"; };
-		1CAA2CAD209C9E650084787C /* FTRouterURLCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTRouterURLCoder.m; sourceTree = "<group>"; };
 		1DF4A837540E629024158E47 /* Pods-RoutesDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo2/Pods-RoutesDemo2.release.xcconfig"; sourceTree = "<group>"; };
 		2A559D418888C047BFBE81FC /* Pods-RoutesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		53B0F744F6C67D4C9776F467 /* Pods-RoutesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoutesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoutesDemo/Pods-RoutesDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +196,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5EEB2520A2B9470007A784 /* JMPme.framework in Frameworks */,
 				B0C16867DF22ECE39344F633 /* Pods_RoutesDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5EEB1A20A2B9460007A784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5EEB5320A2BC160007A784 /* JMPme.framework in Frameworks */,
 				B50FBF279CDBF3E8A98D56C5 /* Pods_RoutesDemo2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,9 +225,9 @@
 			children = (
 				1C79A96420996A54008225A8 /* Podfile */,
 				1C79A96320996A53008225A8 /* README.md */,
-				1C05DA602091FA0400A97BB0 /* Routes */,
 				1C05DA4B2091F9FD00A97BB0 /* RoutesDemo */,
 				1C65F9772092D52E0054E126 /* RoutesDemo2 */,
+				1C5EEB1F20A2B9470007A784 /* JMPme */,
 				1C05DA4A2091F9FD00A97BB0 /* Products */,
 				75CF4508953C0B67CDFB9584 /* Pods */,
 				DC702C2CFC0188863183B12B /* Frameworks */,
@@ -178,6 +239,7 @@
 			children = (
 				1C05DA492091F9FD00A97BB0 /* RoutesDemo.app */,
 				1C65F9762092D52E0054E126 /* RoutesDemo2.app */,
+				1C5EEB1E20A2B9460007A784 /* JMPme.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,46 +263,47 @@
 			path = RoutesDemo;
 			sourceTree = "<group>";
 		};
-		1C05DA602091FA0400A97BB0 /* Routes */ = {
+		1C5EEB1F20A2B9470007A784 /* JMPme */ = {
 			isa = PBXGroup;
 			children = (
-				1C05DA7A2091FA6200A97BB0 /* Routes */,
-				1C05DA6A2091FA3700A97BB0 /* Router.h */,
-				1C05DA792091FA4C00A97BB0 /* Private */,
+				1C5EEB2020A2B9470007A784 /* JMPme.h */,
+				1C5EEB2D20A2BBD90007A784 /* Private */,
+				1C5EEB3320A2BBD90007A784 /* Router */,
+				1C5EEB2120A2B9470007A784 /* Info.plist */,
 			);
-			path = Routes;
+			path = JMPme;
 			sourceTree = "<group>";
 		};
-		1C05DA792091FA4C00A97BB0 /* Private */ = {
+		1C5EEB2D20A2BBD90007A784 /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				1C0D93A52093F22C0007A6D1 /* FTRouterMap.h */,
-				1C0D93A62093F22C0007A6D1 /* FTRouterMap.m */,
-				1C05DA642091FA3600A97BB0 /* FTRouterComponents+FTExtension.h */,
-				1C05DA6D2091FA3800A97BB0 /* _FTRouterTools.h */,
-				1C05DA662091FA3700A97BB0 /* _FTRouterTools.m */,
+				1C5EEB2E20A2BBD90007A784 /* FTRouterComponents+FTExtension.h */,
+				1C5EEB3020A2BBD90007A784 /* FTRouterMap.h */,
+				1C5EEB3120A2BBD90007A784 /* FTRouterMap.m */,
+				1C5EEB5820A2BF670007A784 /* FTRouterTools.h */,
+				1C5EEB5920A2BF670007A784 /* FTRouterTools.m */,
 			);
 			path = Private;
 			sourceTree = "<group>";
 		};
-		1C05DA7A2091FA6200A97BB0 /* Routes */ = {
+		1C5EEB3320A2BBD90007A784 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				1C05DA6C2091FA3800A97BB0 /* FTRouter.h */,
-				1C05DA632091FA3600A97BB0 /* FTRouter.m */,
-				1C05DA672091FA3700A97BB0 /* FTRouterComponents.h */,
-				1C05DA692091FA3700A97BB0 /* FTRouterComponents.m */,
-				1C05DA682091FA3700A97BB0 /* FTRouterDefinition.h */,
-				1C05DA652091FA3600A97BB0 /* NSObject+FTRouterAssociated.h */,
-				1C05DA6E2091FA3800A97BB0 /* NSObject+FTRouterAssociated.m */,
-				1C05DA702091FA3800A97BB0 /* UIWindow+FTRouter.h */,
-				1C05DA6B2091FA3700A97BB0 /* UIWindow+FTRouter.m */,
-				1C0D93A22092A6A80007A6D1 /* UIViewController+FTRouter.h */,
-				1C0D93A32092A6A80007A6D1 /* UIViewController+FTRouter.m */,
-				1CAA2CAC209C9E650084787C /* FTRouterURLCoder.h */,
-				1CAA2CAD209C9E650084787C /* FTRouterURLCoder.m */,
+				1C5EEB4020A2BBD90007A784 /* FTRouter.h */,
+				1C5EEB3920A2BBD90007A784 /* FTRouter.m */,
+				1C5EEB3420A2BBD90007A784 /* FTRouterDefinition.h */,
+				1C5EEB3D20A2BBD90007A784 /* FTRouterComponents.h */,
+				1C5EEB3520A2BBD90007A784 /* FTRouterComponents.m */,
+				1C5EEB3720A2BBD90007A784 /* FTRouterURLCoder.h */,
+				1C5EEB3B20A2BBD90007A784 /* FTRouterURLCoder.m */,
+				1C5EEB3620A2BBD90007A784 /* UIWindow+FTRouter.h */,
+				1C5EEB3C20A2BBD90007A784 /* UIWindow+FTRouter.m */,
+				1C5EEB3A20A2BBD90007A784 /* UIViewController+FTRouter.h */,
+				1C5EEB3E20A2BBD90007A784 /* UIViewController+FTRouter.m */,
+				1C5EEB3820A2BBD90007A784 /* NSObject+FTRouterAssociated.h */,
+				1C5EEB3F20A2BBD90007A784 /* NSObject+FTRouterAssociated.m */,
 			);
-			path = Routes;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		1C65F9772092D52E0054E126 /* RoutesDemo2 */ = {
@@ -325,6 +388,27 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1C5EEB1B20A2B9460007A784 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C5EEB4620A2BBD90007A784 /* FTRouterDefinition.h in Headers */,
+				1C5EEB5A20A2BF670007A784 /* FTRouterTools.h in Headers */,
+				1C5EEB4F20A2BBD90007A784 /* FTRouterComponents.h in Headers */,
+				1C5EEB4C20A2BBD90007A784 /* UIViewController+FTRouter.h in Headers */,
+				1C5EEB4920A2BBD90007A784 /* FTRouterURLCoder.h in Headers */,
+				1C5EEB5220A2BBD90007A784 /* FTRouter.h in Headers */,
+				1C5EEB4A20A2BBD90007A784 /* NSObject+FTRouterAssociated.h in Headers */,
+				1C5EEB4820A2BBD90007A784 /* UIWindow+FTRouter.h in Headers */,
+				1C5EEB4320A2BBD90007A784 /* FTRouterMap.h in Headers */,
+				1C5EEB4120A2BBD90007A784 /* FTRouterComponents+FTExtension.h in Headers */,
+				1C5EEB2220A2B9470007A784 /* JMPme.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		1C05DA482091F9FD00A97BB0 /* RoutesDemo */ = {
 			isa = PBXNativeTarget;
@@ -335,15 +419,35 @@
 				1C05DA462091F9FD00A97BB0 /* Frameworks */,
 				1C05DA472091F9FD00A97BB0 /* Resources */,
 				B20BE3B415E2B412CC30C030 /* [CP] Embed Pods Frameworks */,
+				1C5EEB2A20A2B9470007A784 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1C5EEB2420A2B9470007A784 /* PBXTargetDependency */,
 			);
 			name = RoutesDemo;
 			productName = RoutesDemo;
 			productReference = 1C05DA492091F9FD00A97BB0 /* RoutesDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1C5EEB1D20A2B9460007A784 /* JMPme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C5EEB2920A2B9470007A784 /* Build configuration list for PBXNativeTarget "JMPme" */;
+			buildPhases = (
+				1C5EEB1920A2B9460007A784 /* Sources */,
+				1C5EEB1A20A2B9460007A784 /* Frameworks */,
+				1C5EEB1B20A2B9460007A784 /* Headers */,
+				1C5EEB1C20A2B9460007A784 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMPme;
+			productName = JMPme;
+			productReference = 1C5EEB1E20A2B9460007A784 /* JMPme.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		1C65F9752092D52E0054E126 /* RoutesDemo2 */ = {
 			isa = PBXNativeTarget;
@@ -354,10 +458,12 @@
 				1C65F9732092D52E0054E126 /* Frameworks */,
 				1C65F9742092D52E0054E126 /* Resources */,
 				6FA48EC0886DFCF52A3D0C98 /* [CP] Embed Pods Frameworks */,
+				1C5EEB5720A2BC170007A784 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1C5EEB5620A2BC160007A784 /* PBXTargetDependency */,
 			);
 			name = RoutesDemo2;
 			productName = RoutesDemo2;
@@ -375,6 +481,9 @@
 					1C05DA482091F9FD00A97BB0 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+					};
+					1C5EEB1D20A2B9460007A784 = {
+						CreatedOnToolsVersion = 9.3;
 					};
 					1C65F9752092D52E0054E126 = {
 						CreatedOnToolsVersion = 9.3;
@@ -396,6 +505,7 @@
 			targets = (
 				1C05DA482091F9FD00A97BB0 /* RoutesDemo */,
 				1C65F9752092D52E0054E126 /* RoutesDemo2 */,
+				1C5EEB1D20A2B9460007A784 /* JMPme */,
 			);
 		};
 /* End PBXProject section */
@@ -413,6 +523,13 @@
 				1C05DA592091F9FF00A97BB0 /* LaunchScreen.storyboard in Resources */,
 				1C05DA562091F9FF00A97BB0 /* Assets.xcassets in Resources */,
 				1C05DA542091F9FD00A97BB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5EEB1C20A2B9460007A784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,29 +626,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C65F9AA2092F4300054E126 /* FlashOrderViewController.m in Sources */,
-				1C05DA772091FA3800A97BB0 /* NSObject+FTRouterAssociated.m in Sources */,
 				1C79A92020971542008225A8 /* GuidViewController.m in Sources */,
 				1C65F99B2092F3C20054E126 /* BaseViewController.m in Sources */,
-				1C05DA752091FA3800A97BB0 /* FTRouterComponents.m in Sources */,
 				1C65F9A72092F41A0054E126 /* DetailViewController.m in Sources */,
 				1C65F99E2092F3E30054E126 /* ContractsListViewController.m in Sources */,
 				1C65F9AD2092F43C0054E126 /* ApperanceSettingViewController.m in Sources */,
 				1C65F9C6209323F50054E126 /* ResViewController.m in Sources */,
-				1C65F9BE209318370054E126 /* _FTRouterTools.m in Sources */,
-				1CAA2CAE209C9E650084787C /* FTRouterURLCoder.m in Sources */,
 				1C79A931209724FB008225A8 /* SettingViewController.m in Sources */,
 				1C65F9B320930DBD0054E126 /* UIColor+Helper.m in Sources */,
-				1C0D93A42092A6A80007A6D1 /* UIViewController+FTRouter.m in Sources */,
-				1C05DA762091FA3800A97BB0 /* UIWindow+FTRouter.m in Sources */,
 				1C65F9A12092F3F70054E126 /* SearchViewController.m in Sources */,
-				1C05DA732091FA3800A97BB0 /* FTRouter.m in Sources */,
 				1C65F9942092F1060054E126 /* AppDelegate+Router.m in Sources */,
 				1C05DA5C2091F9FF00A97BB0 /* main.m in Sources */,
 				1C65F9B02092F4500054E126 /* RiskSettingViewController.m in Sources */,
 				1C65F9A42092F40C0054E126 /* GroupEditViewController.m in Sources */,
-				1C0D93A72093F22C0007A6D1 /* FTRouterMap.m in Sources */,
 				1C79A92C20972313008225A8 /* LoginViewController.m in Sources */,
 				1C05DA4E2091F9FD00A97BB0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5EEB1920A2B9460007A784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C5EEB4B20A2BBD90007A784 /* FTRouter.m in Sources */,
+				1C5EEB5B20A2BF670007A784 /* FTRouterTools.m in Sources */,
+				1C5EEB5020A2BBD90007A784 /* UIViewController+FTRouter.m in Sources */,
+				1C5EEB4720A2BBD90007A784 /* FTRouterComponents.m in Sources */,
+				1C5EEB4E20A2BBD90007A784 /* UIWindow+FTRouter.m in Sources */,
+				1C5EEB4D20A2BBD90007A784 /* FTRouterURLCoder.m in Sources */,
+				1C5EEB5120A2BBD90007A784 /* NSObject+FTRouterAssociated.m in Sources */,
+				1C5EEB4420A2BBD90007A784 /* FTRouterMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,22 +663,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C65F9B8209318290054E126 /* FTRouterComponents.m in Sources */,
-				1C79A91D209474A2008225A8 /* FTRouterMap.m in Sources */,
 				1C65F97D2092D52E0054E126 /* ViewController.m in Sources */,
-				1C65F9BC209318330054E126 /* UIViewController+FTRouter.m in Sources */,
-				1C65F9B7209318260054E126 /* FTRouter.m in Sources */,
 				1C65F9882092D52F0054E126 /* main.m in Sources */,
-				1C65F9BB209318310054E126 /* UIWindow+FTRouter.m in Sources */,
-				1C65F9BD209318370054E126 /* _FTRouterTools.m in Sources */,
 				1C65F9C220931BBE0054E126 /* BaseViewController.m in Sources */,
 				1C65F97A2092D52E0054E126 /* AppDelegate.m in Sources */,
-				1C65F9BA2093182E0054E126 /* NSObject+FTRouterAssociated.m in Sources */,
 				1C65F9B6209317430054E126 /* AppDelegate+Router.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C5EEB2420A2B9470007A784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C5EEB1D20A2B9460007A784 /* JMPme */;
+			targetProxy = 1C5EEB2320A2B9470007A784 /* PBXContainerItemProxy */;
+		};
+		1C5EEB5620A2BC160007A784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C5EEB1D20A2B9460007A784 /* JMPme */;
+			targetProxy = 1C5EEB5520A2BC160007A784 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1C05DA522091F9FD00A97BB0 /* Main.storyboard */ = {
@@ -661,7 +791,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo;
@@ -726,7 +859,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -735,6 +871,156 @@
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C5EEB2720A2B9470007A784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NFE8L9VTV6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = JMPme/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.JMPme;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1C5EEB2820A2B9470007A784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = JMPme/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.JMPme;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -795,7 +1081,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo2;
@@ -858,7 +1147,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RoutesDemo2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jyhu.RoutesDemo2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -886,6 +1178,15 @@
 			buildConfigurations = (
 				1C05DA5E2091F9FF00A97BB0 /* Debug */,
 				1C05DA5F2091F9FF00A97BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C5EEB2920A2B9470007A784 /* Build configuration list for PBXNativeTarget "JMPme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C5EEB2720A2B9470007A784 /* Debug */,
+				1C5EEB2820A2B9470007A784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
