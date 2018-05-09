@@ -32,8 +32,8 @@
 }
 
 - (void)pageDismiss {
-    if (self.callback) {    
-        self.callback(nil, nil);
+    if (self.trans_callback) {
+        self.trans_callback(nil, nil);
     }
     [super pageDismiss];
 }

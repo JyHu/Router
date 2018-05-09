@@ -20,7 +20,7 @@
  可以在调用`router`的`handlerBlock`的时候自己设置，
  也可以调用`mergeParamsFromComponents:transitionFrom:`来实现
  */
-@property (nonatomic, weak) id transitionFrom;
+@property (nonatomic, weak) id trans_from;
 
 /**
  页面跳转的时候附带的参数，包括url中的query部分和附加的参数
@@ -28,7 +28,7 @@
  可以在调用`router`的`handlerBlock`的时候自己设置，
  也可以调用`mergeParamsFromComponents:transitionFrom:`来实现
  */
-@property (nonatomic, strong) NSDictionary *parameters;
+@property (nonatomic, strong) NSDictionary *trans_params;
 
 /**
  在`Router`执行跳转的时候附带的回调`block`，用于在目标页面对上级页面做一些数据的回传和控制等。
@@ -36,7 +36,7 @@
  可以在调用`router`的`handlerBlock`的时候自己设置，
  也可以调用`mergeParamsFromComponents:transitionFrom:`来实现
  */
-@property (nonatomic, copy) FTRouterCallBack callback;
+@property (nonatomic, copy) FTRouterCallBack trans_callback;
 
 @end
 

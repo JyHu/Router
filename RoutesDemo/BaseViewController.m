@@ -31,10 +31,10 @@
     
     NSMutableString *info = [[NSMutableString alloc] init];
     [info appendFormat:@"%@\n", NSStringFromClass([self class])];
-    if (self.parameters) {
+    if (self.trans_params) {
         [info appendString:@"parameters:\n"];
-        for (NSString *key in self.parameters.allKeys) {
-            [info appendFormat:@"   - %@ : %@\n", key, self.parameters[key]];
+        for (NSString *key in self.trans_params.allKeys) {
+            [info appendFormat:@"   - %@ : %@\n", key, self.trans_params[key]];
         }
     }
     self.textView.text = info;

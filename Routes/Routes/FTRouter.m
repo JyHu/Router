@@ -208,7 +208,7 @@
 
 + (NSString *)_destinationWithURLComponents:(NSURLComponents *)components {
     NSString *scheme = _FT_UNIFY_SCHEME_(components.scheme) ?: [FTRouter shared].defaultScheme;
-    NSString *path = _FT_UNIFY_PATH_(components.path);
+    NSString *path = _FT_UNIFY_PATH_([components routerPathWithTreatsHostAsPath:[FTRouter shared].alwaysTreatsHostAsPathComponent]);
     
     if (scheme && path) {
         FTRouterMap *routerMap = [[FTRouter shared].routerMaps objectForKey:scheme];

@@ -10,9 +10,9 @@
 #import "FTRouterComponents.h"
 
 @interface _FTRouterWeakAssociatedObject : NSObject
-@property (nonatomic, weak) id transitionFrom;
-@property (nonatomic, strong) NSDictionary *parameters;
-@property (nonatomic, copy) FTRouterCallBack callback;
+@property (nonatomic, weak) id stored_transitionFrom;
+@property (nonatomic, strong) NSDictionary *stored_parameters;
+@property (nonatomic, copy) FTRouterCallBack stored_callback;
 @end
 @implementation _FTRouterWeakAssociatedObject
 @end
@@ -28,28 +28,28 @@
     return associatedObject;
 }
 
-- (void)setTransitionFrom:(id)transitionFrom {
-    [self ft_weakAssociatedObject].transitionFrom = transitionFrom;
+- (void)setTrans_from:(id)trans_from {
+    [self ft_weakAssociatedObject].stored_transitionFrom = trans_from;
 }
 
-- (id)transitionFrom {
-    return [self ft_weakAssociatedObject].transitionFrom;
+- (id)trans_from {
+    return [self ft_weakAssociatedObject].stored_transitionFrom;
 }
 
-- (void)setParameters:(NSDictionary *)parameters {
-    [self ft_weakAssociatedObject].parameters = parameters;
+- (void)setTrans_params:(NSDictionary *)trans_params {
+    [self ft_weakAssociatedObject].stored_parameters = trans_params;
 }
 
-- (NSDictionary *)parameters {
-    return [self ft_weakAssociatedObject].parameters;
+- (NSDictionary *)trans_params {
+    return [self ft_weakAssociatedObject].stored_parameters;
 }
 
-- (void)setCallback:(FTRouterCallBack)callback {
-    [self ft_weakAssociatedObject].callback = callback;
+- (void)setTrans_callback:(FTRouterCallBack)trans_callback {
+    [self ft_weakAssociatedObject].stored_callback = trans_callback;
 }
 
-- (FTRouterCallBack)callback {
-    return [self ft_weakAssociatedObject].callback;
+- (FTRouterCallBack)trans_callback {
+    return [self ft_weakAssociatedObject].stored_callback;
 }
 
 @end
@@ -62,8 +62,8 @@
 }
 
 - (instancetype)mergeParamsFromComponents:(FTRouterComponents *)components transitionFrom:(id)transitionFrom {
-    self.transitionFrom = transitionFrom;
-    self.callback = [components.callback copy];
+    self.trans_from = transitionFrom;
+    self.trans_callback = [components.callback copy];
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
     
@@ -75,7 +75,7 @@
         [parameters addEntriesFromDictionary:components.additionalParams];
     }
     
-    self.parameters = parameters.allKeys.count > 0 ? parameters : nil;
+    self.trans_params = parameters.allKeys.count > 0 ? parameters : nil;
 
     return [self mergeParamsFromDictionary:parameters];
 }

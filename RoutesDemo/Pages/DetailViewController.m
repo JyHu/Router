@@ -39,7 +39,7 @@
 }
 
 - (void)flashOrder {
-    [FTRouter routeURL:[NSURL URLWithString:@"ft://order/flash"] parameters:self.parameters];
+    [FTRouter routeURL:[NSURL URLWithString:@"ft://order/flash"] parameters:self.trans_params];
 }
 
 - (void)apperanceSetting {
