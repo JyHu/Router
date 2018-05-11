@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FTRouterDefinition.h"
+#import "FTRouterAdaptor.h"
 
 #define FTRouterShared [FTRouter shared]
 
@@ -58,27 +59,6 @@
 @property (nonatomic, strong) UIWindow *keyWindow;
 
 /**
- 路由跳转外部实现的`block`，如果添加了这个`block`，那么在执行`Router`跳转的时候，
- 
- 会将路由跳转的一些解析到的信息都通过这`block`回传出去，由外部决定执行的操作
- */
-@property (nonatomic, copy) BOOL (^handlerBlock)(FTRouterComponents *components);
-
-/**
- 在执行自动跳转的时候，用于跳转的拦截处理，用来决定是否可以执行自动跳转
- */
-@property (nonatomic, copy) BOOL (^shouldAutoTransitionInspector)(FTRouterComponents *components);
-
-/**
- 在执行自动跳转的时候，用于改变目标对象的拦截操作。
- 
- 比如在执行`present`的时候，如果我需要目标页面时一个`UINavigationController`，
- 
- 那么就可以在这里做拦截处理，并返回一个`UINavigationCotontroller`或其子类
- */
-@property (nonatomic, copy) id (^willTransitionInspector)(FTRouterComponents *components, UIViewController *topViewController);
-
-/**
  当前APP全局的`scheme`，如果不设置这个参数，那么在执行路由地址注册、路由跳转的时候，必须带上`scheme`，
  
  否则会跳转失败或者注册失败。
@@ -88,6 +68,12 @@
  如果路由地址中带了`scheme`，那么还是以路由地址中的为主。
  */
 @property (nonatomic, readonly, copy) NSString *defaultScheme;
+
+@property (nonatomic, strong, readonly) id <FTRouterAdaptor> adaptor;
+
+#pragma mark - 适配器
+
++ (void)registerAdaptor:(Class)adaptorCls;
 
 #pragma mark - `scheme`的注册、销毁等操作
 
@@ -276,9 +262,9 @@
 extern NSErrorDomain const FTRouterDomain;
 extern NSInteger FTTransitionErrorCode;
 
-extern NSString *const FTPageTransitionTypePush;
-extern NSString *const FTPageTransitionTypePresent;
-extern NSString *const FTPageTransitionTypePageBack;
-extern NSString *const FTPageTransitionTypeRoot;
+extern NSString *const FTTransitionTypePushKey;
+extern NSString *const FTTransitionTypePresentKey;
+extern NSString *const FTTransitionTypePageBackKey;
+extern NSString *const FTTransitionTypeRootKey;
 
 

@@ -8,6 +8,10 @@
 #import "AppDelegate+Router.h"
 #import "JMPme.h"
 
+@interface RouterAdaptor: NSObject <FTRouterAdaptor>
+
+@end
+
 @implementation AppDelegate (Router)
 
 - (void)registerRoutes {
@@ -24,21 +28,28 @@
     [FTRouter registerPath:@"guide" withDestinationName:@"GuidViewController"];
     [FTRouter registerPath:@"account/login" withDestinationName:@"LoginViewController"];
     
+    [FTRouter registerAdaptor:[RouterAdaptor class]];
+
     [FTRouter shared].keyWindow = self.window;
-    
-    [[FTRouter shared] setWillTransitionInspector:^id(FTRouterComponents *components, UIViewController *topViewController) {
-        if (components.transitionType == FTRouterTransitionTypePresent ||
-            components.transitionType == FTRouterTransitionTypeRoot) {
-            
-            Class destCls = components.destination ? NSClassFromString(components.destination) : NULL;
-            if (destCls != NULL && [destCls isSubclassOfClass:[UIViewController class]]) {
-                UIViewController *destVC = [[destCls alloc] init];
-                [destVC mergeParamsFromComponents:components transitionFrom:topViewController];
-                return [[UINavigationController alloc] initWithRootViewController:destVC];
-            }
+}
+
+@end
+
+
+@implementation RouterAdaptor
+
+- (UIViewController *)routerTransitionInspector:(FTRouterComponents *)components topViewController:(UIViewController *)topVC {
+    if (components.transitionType == FTRouterTransitionTypePresent ||
+        components.transitionType == FTRouterTransitionTypeRoot) {
+        
+        Class destCls = components.destination ? NSClassFromString(components.destination) : NULL;
+        if (destCls != NULL && [destCls isSubclassOfClass:[UIViewController class]]) {
+            UIViewController *destVC = [[destCls alloc] init];
+            [destVC mergeParamsFromComponents:components transitionFrom:topVC];
+            return [[UINavigationController alloc] initWithRootViewController:destVC];
         }
-        return nil;
-    }];
+    }
+    return nil;
 }
 
 @end

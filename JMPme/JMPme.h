@@ -14,6 +14,7 @@
 #import "UIWindow+FTRouter.h"
 #import "UIViewController+FTRouter.h"
 #import "FTRouterURLCoder.h"
+#import "FTRouterAdaptor.h"
 
 //! Project version number for JMPme.
 FOUNDATION_EXPORT double JMPmeVersionNumber;

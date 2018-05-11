@@ -13,7 +13,7 @@
 /**
  页面跳转时传到目标页面的一个回调block，用于回传参数、上级页面的控制等
  */
-typedef id (^FTRouterCallBack)(__weak id directedTarget, id userInfo);
+typedef id (^FTRouterCallBack)(id directedTarget, id userInfo);
 
 /**
  页面跳转的方法

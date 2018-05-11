@@ -12,6 +12,7 @@
 #import "UIWindow+FTRouter.h"
 #import "UIViewController+FTRouter.h"
 #import "FTRouterComponents+FTExtension.h"
+#import <objc/runtime.h>
 
 @interface FTRouter()
 
@@ -21,6 +22,8 @@
 @property (nonatomic, strong) NSMutableDictionary <NSString *, FTRouterMap *> *routerMaps;
 
 @property (nonatomic, readwrite, copy) NSString *defaultScheme;
+
+@property (nonatomic, strong, readwrite) id <FTRouterAdaptor> adaptor;
 
 @end
 
@@ -35,6 +38,14 @@
         router.alwaysTreatsHostAsPathComponent = YES;
     });
     return router;
+}
+
+#pragma mark - 注册适配器
+
++ (void)registerAdaptor:(Class)adaptorCls {
+    NSAssert(adaptorCls, @"请注册一个有效的适配器");
+    NSAssert1(class_conformsToProtocol(adaptorCls, @protocol(FTRouterAdaptor)), @"所注册的适配器`%@`没有实现`FTRouterAdaptor`协议", NSStringFromClass(adaptorCls));
+    [FTRouter shared].adaptor = [[adaptorCls alloc] init];
 }
 
 #pragma mark - `scheme`的注册、销毁等操作
@@ -257,9 +268,10 @@
        callBack:(FTRouterCallBack)callback{
     
     NSString *scheme = URL.scheme ?: [FTRouter shared].defaultScheme;
+    id <FTRouterAdaptor> adaptor = [FTRouter shared].adaptor;
     
     if (!URL || ![FTRouter isRegisteredScheme:scheme] ||
-        (![FTRouter shared].handlerBlock && ![FTRouter shared].keyWindow)) {
+        (!adaptor && ![FTRouter shared].keyWindow)) {
         return NO;
     }
     
@@ -270,12 +282,15 @@
     
     _FTRouterDebugLog(@"%@", components);
     
-    if ([FTRouter shared].handlerBlock) {
-        return [FTRouter shared].handlerBlock(components);
+    if (adaptor && [adaptor respondsToSelector:@selector(routerHandler:)]) {
+        return [adaptor routerHandler:components];
     }
     
     if ([FTRouter shared].keyWindow) {
-        if (![FTRouter shared].shouldAutoTransitionInspector || ([FTRouter shared].shouldAutoTransitionInspector && [FTRouter shared].shouldAutoTransitionInspector(components))) {
+        if (!adaptor ||
+            ![adaptor respondsToSelector:@selector(routerShouldAutoTransitionWith:topViewController:)] ||
+            [adaptor routerShouldAutoTransitionWith:components topViewController:[FTRouter shared].keyWindow.ft_topViewController]) {
+            
             if (components.transitionType == FTRouterTransitionTypeRoot) {
                 return [[FTRouter shared].keyWindow changeRootViewControllerWithComponents:components];
             } else {
@@ -303,7 +318,7 @@
 NSErrorDomain const FTRouterDomain = @"com.ft.routerDomain";
 NSInteger FTTransitionErrorCode = 20001;
 
-NSString *const FTPageTransitionTypePush        = @"push";
-NSString *const FTPageTransitionTypePresent     = @"present";
-NSString *const FTPageTransitionTypePageBack    = @"back";
-NSString *const FTPageTransitionTypeRoot        = @"root";
+NSString *const FTTransitionTypePushKey        = @"push";
+NSString *const FTTransitionTypePresentKey     = @"present";
+NSString *const FTTransitionTypePageBackKey    = @"back";
+NSString *const FTTransitionTypeRootKey        = @"root";

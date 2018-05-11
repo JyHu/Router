@@ -48,12 +48,13 @@
     if (_FT_IS_VALIDATE_STRING_(components.destination)) {
         
         Class cls = NSClassFromString(components.destination);
+        id <FTRouterAdaptor> adaptor = [FTRouter shared].adaptor;
         if (cls) {
             
             id dest = nil;
             // 如果设置了拦截器，则使用拦截器从外部生成一个对象
-            if ([FTRouter shared].willTransitionInspector) {
-                dest = [FTRouter shared].willTransitionInspector(components, self);
+            if (adaptor && [adaptor respondsToSelector:@selector(routerTransitionInspector:topViewController:)]) {
+                dest = [adaptor routerTransitionInspector:components topViewController:self];
             }
             
             // 如果没有目标对象，而且当前的类是一个`UIViewController`子类，则生成一个对应的对象

@@ -105,6 +105,11 @@
  */
 @property (nonatomic, readonly, copy) NSString *destination;
 
+/**
+ 从哪儿打开的
+ */
+@property (nonatomic, readonly, copy) NSString *sourceApplication;
+
 - (instancetype)initWithURL:(NSURL *)URL additionalParameters:(NSDictionary *)params treatsHostAsPathComponent:(BOOL)treatsHostAsPathComponent;
 - (instancetype)initWithURL:(NSURL *)URL additionalParameters:(NSDictionary *)params treatsHostAsPathComponent:(BOOL)treatsHostAsPathComponent defaultScheme:(NSString *)defaultScheme;
 

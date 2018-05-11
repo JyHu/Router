@@ -50,8 +50,8 @@
     
     UIViewController *destPage = nil;
     
-    if ([FTRouter shared].willTransitionInspector) {
-        destPage = [FTRouter shared].willTransitionInspector(components, nil);
+    if ([FTRouter shared].adaptor && [[FTRouter shared].adaptor respondsToSelector:@selector(routerTransitionInspector:topViewController:)]) {
+        destPage = [[FTRouter shared].adaptor routerTransitionInspector:components topViewController:self.ft_topViewController];
     }
     
     if (!destPage) {

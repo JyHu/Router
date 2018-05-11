@@ -23,6 +23,7 @@
 @property (nonatomic, readwrite, strong) NSDictionary *additionalParams;
 @property (nonatomic, readwrite, assign) FTRouterTransitionType transitionType;
 @property (nonatomic, readwrite, copy) NSURL *followedURL;
+@property (nonatomic, readwrite, copy) NSString *sourceApplication;
 
 @end
 
@@ -41,6 +42,12 @@
         self.originalURL = URL;
         self.additionalParams = params;
         self.scheme = _FT_UNIFY_SCHEME_(URL.scheme ?: defaultScheme);
+        
+        if (params) {
+            if (@available(iOS 9.0, *)) {
+                self.sourceApplication = params[UIApplicationOpenURLOptionsSourceApplicationKey];
+            }
+        }
         
         NSURLComponents *components = [NSURLComponents componentsWithString:URL.absoluteString];
         
@@ -74,13 +81,13 @@
         
         NSMutableArray *pathComponents = [[path componentsSeparatedByString:@"/"] mutableCopy];
         if (pathComponents && pathComponents.count > 0) {
-            if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePush]) {
+            if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTTransitionTypePushKey]) {
                 self.transitionType = FTRouterTransitionTypePush;
-            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePresent]) {
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTTransitionTypePresentKey]) {
                 self.transitionType = FTRouterTransitionTypePresent;
-            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypePageBack]) {
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTTransitionTypePageBackKey]) {
                 self.transitionType = FTRouterTransitionTypePageback;
-            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTPageTransitionTypeRoot]) {
+            } else if ([[pathComponents.firstObject lowercaseString] isEqualToString:FTTransitionTypeRootKey]) {
                 self.transitionType = FTRouterTransitionTypeRoot;
             } else {
                 self.transitionType = FTRouterTransitionTypeDefault;
@@ -169,10 +176,10 @@
 
 - (NSString *)transitionTypeString {
     switch (self.transitionType) {
-        case FTRouterTransitionTypePresent: return FTPageTransitionTypePresent;
-        case FTRouterTransitionTypePush:    return FTPageTransitionTypePush;
-        case FTRouterTransitionTypePageback:return FTPageTransitionTypePageBack;
-        case FTRouterTransitionTypeRoot:    return FTPageTransitionTypeRoot;
+        case FTRouterTransitionTypePresent: return FTTransitionTypePresentKey;
+        case FTRouterTransitionTypePush:    return FTTransitionTypePushKey;
+        case FTRouterTransitionTypePageback:return FTTransitionTypePageBackKey;
+        case FTRouterTransitionTypeRoot:    return FTTransitionTypeRootKey;
         default:                            return @"default";
     }
 }

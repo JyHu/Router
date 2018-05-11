@@ -23,7 +23,7 @@
 
     [self registerRoutes];
     [FTRouter routeURL:[NSURL URLWithString:@"root/guide"]];
-    
+
     return YES;
 }
 
