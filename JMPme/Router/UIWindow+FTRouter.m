@@ -8,16 +8,26 @@
 #import "UIWindow+FTRouter.h"
 #import "FTRouterComponents.h"
 #import "FTRouter.h"
+#import <objc/runtime.h>
 
 @implementation UIWindow (FTRouter)
 
+- (void)setUnlegallyViewControllerClasses:(NSArray<NSString *> *)unlegallyViewControllerClasses {
+    objc_setAssociatedObject(self, @selector(unlegallyViewControllerClasses), unlegallyViewControllerClasses, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSArray<NSString *> *)unlegallyViewControllerClasses {
+    return objc_getAssociatedObject(self, @selector(unlegallyViewControllerClasses)) ?: @[];
+}
+
 - (UIViewController *)ft_topViewController {
-    return [self ft_topViewControllerWithExceptBlock:nil];
+    return [self ft_topViewControllerWithExceptClasses:nil];
 }
 
 - (UIViewController *)ft_topViewControllerWithExceptClasses:(NSArray *)classes {
+    NSArray *clses = [classes ?: @[] arrayByAddingObjectsFromArray:self.unlegallyViewControllerClasses];
     return [self ft_topViewControllerWithExceptBlock:^BOOL(UIResponder *responder) {
-        return classes && [classes containsObject:NSStringFromClass([responder class])];
+        return clses && [clses containsObject:NSStringFromClass([responder class])];
     }];
 }
 

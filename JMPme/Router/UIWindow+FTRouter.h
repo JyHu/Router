@@ -24,11 +24,11 @@
  @return 最顶层的视图控制器
  */
 
-
-
 - (UIViewController *)ft_topViewControllerWithExceptBlock:(BOOL (^)(UIResponder *responder))exceptBlock;
 - (UIViewController *)ft_topViewControllerWithExceptClasses:(NSArray *)classes;
 - (UIViewController *)ft_topViewController;
+
+@property (nonatomic, strong) NSArray <NSString *> *unlegallyViewControllerClasses;
 
 /**
  切换跟视图控制器
