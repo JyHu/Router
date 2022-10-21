@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
   为了模块的解耦，使用路由的方式进行跳转。
                        DESC
 
-  s.homepage         = 'https://git.tigerbrokers.net/ftiger_ios_group/Router'
+  s.homepage         = 'https://github.com/JyHu/Router'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'JyHu' => 'auu.aug@gmail.com' }
-  s.source           = { :git => 'https://git.tigerbrokers.net/ftiger_ios_group/Router.git', :tag => '0.1' }
+  s.source           = { :git => 'https://github.com/JyHu/Router.git', :tag => '0.1' }
 
   s.ios.deployment_target = '8.0'
   s.source_files = 'JMPme/**/*.{h,m}'
