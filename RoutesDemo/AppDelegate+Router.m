@@ -31,6 +31,8 @@
     [FTRouter registerAdaptor:[RouterAdaptor class]];
 
     [FTRouter shared].keyWindow = self.window;
+    
+    [FTRouter checkAllRegisteredPath];
 }
 
 @end

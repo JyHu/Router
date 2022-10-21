@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>/</key>
+	<dict>
+		<key>mine</key>
+		<dict>
+			<key>setting</key>
+			<dict>
+				<key>.</key>
+				<string>ab1</string>
+				<key>exchange</key>
+				<string>aaa</string>
+				<key>sprides</key>
+				<string>bbb</string>
+			</dict>
+			<key>invite</key>
+			<string>vv</string>
+			<key>phone</key>
+			<string>er</string>
+		</dict>
+		<key>stock</key>
+		<dict>
+			<key>subgroup</key>
+			<string>wer</string>
+			<key>rank</key>
+			<string>j122</string>
+		</dict>
+	</dict>
+	<key>ft</key>
+	<dict>
+		<key>contract</key>
+		<dict>
+			<key>detail</key>
+			<dict>
+				<key>.</key>
+				<string>asd</string>
+				<key>hori</key>
+				<string>sdfg</string>
+				<key>risk</key>
+				<string>hg3</string>
+			</dict>
+			<key>setting</key>
+			<string>asda</string>
+			<key>apperance</key>
+			<string>4fsd</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

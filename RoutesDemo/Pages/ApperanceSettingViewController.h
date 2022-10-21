@@ -9,6 +9,10 @@
 
 @interface ApperanceSettingViewController : BaseViewController
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *from;
+@property (nonatomic, assign) NSInteger age;
+@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, strong) NSArray *goods;
 
 @end

@@ -7,6 +7,7 @@
 
 #import "NSObject+FTRouterAssociated.h"
 #import <objc/runtime.h>
+#import "FTRouter.h"
 #import "FTRouterComponents.h"
 
 @interface _FTRouterWeakAssociatedObject : NSObject

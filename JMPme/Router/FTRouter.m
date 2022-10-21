@@ -48,6 +48,17 @@
     [FTRouter shared].adaptor = [[adaptorCls alloc] init];
 }
 
++ (void)checkAllRegisteredPath {
+    for (FTRouterMap *map in [FTRouter shared].routerMaps.allValues) {
+        for (NSString *path in map.destinationsMap) {
+            NSString *dest = map.destinationsMap[path];
+            if (NSClassFromString(dest) == NULL) {
+                _FTRouterDebugLog(@"Invalidate path:%@ -> dest:%@", path, dest);
+            }
+        }
+    }
+}
+
 #pragma mark - `scheme`的注册、销毁等操作
 
 + (void)unregisterRouterWithScheme:(NSString *)scheme {
@@ -123,22 +134,23 @@
 
 + (BOOL)_registerWithURLComponents:(NSURLComponents *)components destinationName:(NSString *)destName {
     NSString *scheme = _FT_UNIFY_SCHEME_(components.scheme) ?: [FTRouter shared].defaultScheme;
-    if (scheme && _FT_IS_VALIDATE_STRING_(destName)) {
-        NSString *path = _FT_UNIFY_PATH_([components routerPathWithTreatsHostAsPath:[FTRouter shared].alwaysTreatsHostAsPathComponent]);
-        if (_FT_IS_VALIDATE_STRING_(path)) {
-            FTRouterMap *routerMap = [self _mapWithAutoRegisteredScheme:scheme];
-            
-            if (routerMap) {
-                [routerMap.destinationsMap setObject:destName forKey:path];
-            }
-            
-            _FTRouterDebugLog(@"Register --> [Router `%@` : <`%@` - `%@`>]", scheme, path, destName);
-            
-            return YES;
-        }
+    
+    NSAssert1(scheme, @"无效的scheme `%@`", scheme);
+    NSAssert1(_FT_IS_VALIDATE_STRING_(destName), @"无效的目标类名`%@`", destName);
+    
+    NSString *path = _FT_UNIFY_PATH_([components routerPathWithTreatsHostAsPath:[FTRouter shared].alwaysTreatsHostAsPathComponent]);
+    
+    NSAssert1(_FT_IS_VALIDATE_STRING_(path), @"无效的路由地址`%@`", path);
+    
+    FTRouterMap *routerMap = [self _mapWithAutoRegisteredScheme:scheme];
+    
+    if (routerMap) {
+        [routerMap.destinationsMap setObject:destName forKey:path];
     }
     
-    return NO;
+    _FTRouterDebugLog(@"Register --> [Router `%@` : <`%@` - `%@`>]", scheme, path, destName);
+    
+    return YES;
 }
 
 + (FTRouterMap *)_mapWithAutoRegisteredScheme:(NSString *)scheme {
@@ -186,13 +198,38 @@
 
 + (BOOL)registerWithDictionary:(NSDictionary *)routesDictionary {
     if (routesDictionary) {
-        for (NSString *path in routesDictionary) {
-            [self registerPath:path withDestinationName:routesDictionary[path]];
-        }
+        [self _registerWithDictionary:routesDictionary curPath:nil deepLevel:0];
         return YES;
     }
     return NO;
 }
+
++ (void)_registerWithDictionary:(NSDictionary *)dict curPath:(NSString *)curPath deepLevel:(NSInteger)level {
+    for (NSString *key in dict) {
+        NSString *path = nil;
+        if ([key isEqualToString:@"/"]) {
+            path = nil;
+        } else if ([key isEqualToString:@"."]) {
+            path = curPath;
+        } else if (level == 0) {
+            path = [key stringByAppendingString:@"://"];
+        } else if (level == 1) {
+            path = [NSString stringWithFormat:@"%@%@", curPath ?: @"", key];
+        } else {
+            path = [NSString stringWithFormat:@"%@/%@", curPath, key];
+        }
+
+        id value = dict[key];
+        if (value) {
+            if ([value isKindOfClass:[NSDictionary class]]) {
+                [self _registerWithDictionary:value curPath:path deepLevel:level + 1];
+            } else {
+                [self registerPath:path withDestinationName:value];
+            }
+        }
+    }
+}
+
 
 + (BOOL)isRegisteredScheme:(NSString *)scheme {
     scheme = _FT_UNIFY_SCHEME_(scheme);

@@ -2,17 +2,43 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>account/setting</key>
-	<string>SettingViewController</string>
-	<key>contract/list</key>
-	<string>ContractsListViewController</string>
-	<key>ft://order/flash</key>
-	<string>FlashOrderViewController</string>
-	<key>ft://contract/edit</key>
-	<string>GroupEditViewController</string>
-	<key>ft://contract/detail</key>
-	<string>DetailViewController</string>
-	<key>ft://market/search</key>
-	<string>SearchViewController</string>
+	<key>/</key>
+	<dict>
+		<key>contract</key>
+		<dict>
+			<key>list</key>
+			<string>ContractsListViewController</string>
+		</dict>
+		<key>account</key>
+		<dict>
+			<key>setting</key>
+			<dict>
+				<key>.</key>
+				<string>SettingViewController</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>ft</key>
+	<dict>
+		<key>market</key>
+		<dict>
+			<key>search</key>
+			<string>SearchViewController</string>
+		</dict>
+		<key>order</key>
+		<dict>
+			<key>flash</key>
+			<string>FlashOrderViewController</string>
+		</dict>
+		<key>contract</key>
+		<dict>
+			<key>edit</key>
+			<string>GroupEditViewController</string>
+			<key>detail</key>
+			<string>DetailViewController</string>
+			<key>test</key>
+			<string>testclass</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

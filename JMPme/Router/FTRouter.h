@@ -11,6 +11,8 @@
 
 #define FTRouterShared [FTRouter shared]
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTRouter : NSObject
 
 /**
@@ -69,11 +71,22 @@
  */
 @property (nonatomic, readonly, copy) NSString *defaultScheme;
 
+/**
+ 如果注册了路由适配器，那么这个会是所注册类的对象，否则为nil
+ */
 @property (nonatomic, strong, readonly) id <FTRouterAdaptor> adaptor;
 
 #pragma mark - 适配器
 
+/**
+ 注册一个适配器，用于接收路由跳转中的各种事件处理，必须实现`FTRouterAdaptor`协议
+ */
 + (void)registerAdaptor:(Class)adaptorCls;
+
+/**
+ 检查所有注册的类是否有效
+ */
++ (void)checkAllRegisteredPath;
 
 #pragma mark - `scheme`的注册、销毁等操作
 
@@ -268,3 +281,4 @@ extern NSString *const FTTransitionTypePageBackKey;
 extern NSString *const FTTransitionTypeRootKey;
 
 
+NS_ASSUME_NONNULL_END
